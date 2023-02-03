@@ -12,13 +12,6 @@ export function RoutePages() {
     let location = useLocation();
     
     return (
-        <TransitionGroup>
-            <CSSTransition
-                key={location.pathname}
-                classNames="transitionPage"
-                timeout={1000}
-                unmountOnExit
-            >
                 <Routes location={location}>
                     <Route path="/" element={<Home />} />
                     <Route path="/About" element={<About />} />
@@ -28,8 +21,5 @@ export function RoutePages() {
                     <Route path="/Contact" element={<Contact />} />
                     <Route path="*" element={<Navigate to="/" />} />
                 </Routes>
-
-            </CSSTransition>
-        </TransitionGroup >
     )
 }
