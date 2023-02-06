@@ -44,12 +44,11 @@ export interface iProjecProviderValue {
   Idproject: number,
   setIdproject: React.Dispatch<React.SetStateAction<number>>,
   BaseProjects: IProductprops[]
+  slide: Variants
 }
 export interface iImgLanguages {
   language: string
 }
-export interface iRoutes {
-  path: string,
-  name:string
-  Component: () => JSX.Element
+interface Variants {
+  [key: string]: any
 }

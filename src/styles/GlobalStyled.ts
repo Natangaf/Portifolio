@@ -21,6 +21,7 @@ export const GlobalStyled = createGlobalStyle`
 body{
   font-family: 'Roboto', sans-serif;
   overflow: hidden;
+  background-color: var(--Color-gray-100);
 }
 ::-webkit-scrollbar {
   width: 7px;
@@ -33,30 +34,5 @@ body{
 ::-webkit-scrollbar-thumb {
   background-color: var(--colorPrimary);
 }
-/* .transitionPage-enter {
-  animation: wipe-in-up 1s;
 
-}
-
-.transitionPage-enter.transitionPage-enter-active {
- animation: wipe-in-up 1s;
-}
-
-.transitionPage-exit {
-  animation: wipe-out-up 1s;
-}  
-
-.transitionPage-exit.transitionPage-exit-active {
-   animation: wipe-out-up 1s;
-} */
- .transitionPage-enter {
-   opacity: 0;
-  z-index: 1;
-
-}
-
-.transitionPage-enter.transitionPage-enter-active {
-  opacity: 1;
-  transition: opacity 250ms ease-in;
-}
 `;
