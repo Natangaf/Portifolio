@@ -8,14 +8,7 @@ export const ProjectContext = createContext({} as iProjecProviderValue)
 export const ProjectProvider = ({ children }: iProjecProviderProps) => {
     const [Idproject, setIdproject] = useState(0)
     const BaseProjects = ProjectsList
-
-    function useParallax(value: MotionValue<number>, distance: number) {
-        return useTransform(value, [0, 1], [-distance, distance]);
-    }
-
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useParallax(scrollYProgress, 300);
+    
 
     return (
         <ProjectContext.Provider

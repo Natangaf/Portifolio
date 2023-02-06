@@ -42,8 +42,18 @@ export function Project() {
     })
 
     return (project && (
-        <StylesProject >
-            <motion.div style={{ scaleX: scrollYProgress }} />
-        </StylesProject >)
+        <motion.div
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{
+                backgroundColor: "black",
+                y: -window.innerHeight
+            }}
+        >
+            <StylesProject >
+                <motion.div style={{ scaleX: scrollYProgress }} />
+            </StylesProject >
+        </motion.div>
+    )
     )
 }

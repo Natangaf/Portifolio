@@ -4,7 +4,7 @@ import principal from "../../assets/img/background/principal.jpg"
 
 export const StylesHome = styled.main`
     width: 100%;
-    height: 100vh;
+    height: 101vh;
     background-image: url(${principal});
     background-position: center;
     background-size: cover;
@@ -49,5 +49,13 @@ export const StylesHome = styled.main`
         display: flex; 
         gap: 5px;
     }
-   
+    .teste{
+        position: absolute;
+        top: 20;
+        left: 0;
+        right: 0;
+        height: 10px;
+        background: var(--red);
+        transform-origin: 0%;
+    }
 `

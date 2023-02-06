@@ -50,6 +50,5 @@ export interface iImgLanguages {
 }
 export interface iRoutes {
   path: string,
-  name:string
   Component: () => JSX.Element
 }
