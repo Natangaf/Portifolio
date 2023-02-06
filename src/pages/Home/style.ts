@@ -1,8 +1,9 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import principal from "../../assets/img/background/principal.jpg"
 
 
-export const StylesHome = styled.main`
+export const StylesHome = styled(motion.main)`
     width: 100%;
     height: 101vh;
     background-image: url(${principal});
@@ -13,6 +14,7 @@ export const StylesHome = styled.main`
     display: flex;
     align-items: center;
     justify-content: center;
+    position: absolute;
     .descripition{
         width:70% ;
         height: 40%;

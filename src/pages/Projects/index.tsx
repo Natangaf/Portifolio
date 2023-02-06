@@ -1,22 +1,21 @@
-import React from "react"
 import { CardProject } from "../../components/cardProject";
 import { StylesProjects } from "./style";
-import { motion } from 'framer-motion';
+import { useContext } from 'react';
+import { ProjectContext } from "../../context/ProjectContext";
 
 export function Projects() {
-    
+    const { slide } = useContext(ProjectContext)
     return (
-        <motion.div
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
+        <StylesProjects
+            variants={slide}
+            animate="mostrar"
+            initial="inicial"
+            exit="esconder"
             transition={{
                 type: "just"
             }}
         >
-
-        <StylesProjects>
-            <CardProject/>
+            <CardProject />
         </StylesProjects>
-        </motion.div>
     )
 }

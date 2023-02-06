@@ -11,7 +11,7 @@ export const StylesAside = styled.aside`
     position: absolute;
     top: 0;
     z-index: 2;
-    left: 5px;
+    left: 20px;
     a{
         height: 20px;
         width: 20px;
