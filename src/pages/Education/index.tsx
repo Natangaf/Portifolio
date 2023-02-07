@@ -5,6 +5,7 @@ import { StyledButtons } from "../../styles/Buttons";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
 import { BaseEducation } from "../../base/baseEducation";
+import { ProjectContext } from "../../context/ProjectContext";
 
 
 export function Education() {
