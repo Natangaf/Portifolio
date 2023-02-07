@@ -2,58 +2,91 @@ import { StylesProject } from "./style";
 import { useContext, useEffect } from 'react';
 import { ProjectContext } from "../../context/ProjectContext"
 import { useNavigate } from 'react-router-dom';
-import { ProjectsList } from "../../base/BaseProjects";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import { useState } from 'react';
 import { IProductprops, iImagesProject } from "../../interface"
-import { StyledTypography } from "../../components/baseTypography/style";
-import { ImgLanguages } from "../../components/imgLanguages/imgLanguages";
-import { StyledButtons } from "../../styles/Buttons";
-
+import { ProjectsList } from "../../base/baseProjects"
+import { motion } from 'framer-motion';
+import { StyledTypography } from './../../components/baseTypography/style';
+import github from '../../assets/icons/github.svg'
+import word from '../../assets/icons/word.svg'
 export function Project() {
     const { Idproject } = useContext(ProjectContext)
     const [project, setProject] = useState({} as IProductprops)
+    const [img, setImg] = useState(0)
     const navigate = useNavigate()
 
-    const { scrollYProgress, scrollY } = useScroll()
-    // useEffect(() => {
-    //     if (Idproject === 0) {
-    //         return navigate("/")
-    //     }
-    //     const findProject = ProjectsList.find(project => project.id == Idproject)
-    //     if (findProject) {
-    //         setProject(findProject)
-    //         setSelectedTab(findProject.images[0])
-    //     }
-    // }, [project])
+    useEffect(() => {
+        const project: IProductprops | undefined = ProjectsList.find((pro) => pro.id == Idproject)
+        if (project) {
+            setProject(project)
+        } else {
+            navigate("/")
+        }
 
-    // const nextProject = () => {
-    //     const findProject = ProjectsList.find(project => project.id == Idproject + 1)
-    //     if (!findProject) {
-    //         setProject(ProjectsList[0])
-    //         setSelectedTab(ProjectsList[0].images[0])
-    //     } else {
-    //         console.log(findProject);
-    //         setProject(findProject)
-    //     }
-    // }
-    useMotionValueEvent(scrollY, "change", (latest) => {
-        console.log("Page scroll: ", scrollY)
-    })
+    }, [project])
+    const container = {
+        hidden: { opacity: 1, scale: 0 },
+        visible: {
+            opacity: 1,
+            scale: 1,
+            transition: {
+                delayChildren: 1,
+                staggerChildren: 0.5
+            }
+        }
+    };
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1
+        }
+    };
 
-    return (project && (
-        <motion.div
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{
-                backgroundColor: "black",
-                y: -window.innerHeight
-            }}
-        >
-            <StylesProject >
-                <motion.div style={{ scaleX: scrollYProgress }} />
-            </StylesProject >
-        </motion.div>
+    return (
+        <StylesProject>
+            <div className="containerDiv">
+                <div>
+                    <StyledTypography tag="h2" classText="Heading3">
+                        {project.name}
+                    </StyledTypography>
+                    <StyledTypography tag="p" classText="Body">
+                        {project.description}
+                    </StyledTypography>
+                    <div className="links">
+                        {project.linkRepo && <a href={project.linkRepo} target="_blank">
+                            <img src={github} alt="" />
+                            Repositorio
+                        </a>}
+                        {project.linkSite && <a href={project.linkSite} target="_blank">
+                            <img src={word} alt="" />
+                            Demo Do Projeto
+                        </a>}
+                    </div>
+                </div>
+                <motion.figure
+                    className="container"
+                    variants={container}
+                    initial="hidden"
+                    animate="visible"
+                >
+                    {project.images && <motion.img src={project.images[img].img} />}
+                    <div className="apresentation">
+                        {project?.images?.map((img, i) =>
+                            <motion.img
+                                key={img.page}
+                                src={img.img}
+                                variants={item}
+                                whileHover={{ scale: [null, 1.5, 1.4] }}
+                                transition={{ duration: 0.3 }}
+                                onClick={() => { setImg(i) }}
+                            />
+                        )}
+                    </div>
+                </motion.figure>
+            </div>
+            
+        </StylesProject >
     )
-    )
+
 }

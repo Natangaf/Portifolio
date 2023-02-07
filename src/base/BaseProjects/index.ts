@@ -33,7 +33,9 @@ export const ProjectsList = [
         {
             page: "Calculo",
             img: nuKenzieRegister
-        }]
+        }],
+        linkRepo: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s1-template-nu-kenzie.natanga",
+        linkSite: "https://react-entrega-s1-template-nu-kenzie-natanga.vercel.app/"
     },
     {
         id: 2,
@@ -64,7 +66,7 @@ export const ProjectsList = [
         name: "Rick and Mory",
         description: "Um sistema simple onde voce pode encontrar personagens favoritos,apenas utiloxamdo api",
         background: RickandMory,
-        usedLanguages: ["react", "css", "javascript", "typescript"],
+        usedLanguages: ["react", "css", "javascript", ],
         images: [
             {
                 page: "DashBoard",
@@ -73,7 +75,9 @@ export const ProjectsList = [
             {
                 page: "Especifico personagem",
                 img: RickandMory
-            }]
+            }],
+        linkRepo: "https://github.com/Kenzie-Academy-Brasil-Developers/react-atividade-s1-template-buscando-dados-na-api-rick-and-morty-natanga",
+        linkSite: "https://rickandmory.vercel.app/"
     },
     {
         id: 4,
@@ -97,7 +101,9 @@ export const ProjectsList = [
             {
                 page: "Dashboard",
                 img: doAçaoHomePage
-            }]
+            }],
+        linkRepo: "https://github.com/project-lets-cook",
+        linkSite: "https://do-acao.vercel.app/"
 
     },
     {
@@ -122,7 +128,10 @@ export const ProjectsList = [
             {
                 page: "Dashboard",
                 img: nonosBuger
-            }]
+            }],
+        linkRepo: "https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-hamburgueria-v2-natanga",
+        linkSite: "https://s5-15-entrega-projeto-hamburgueria-2-0.vercel.app/"
+
     },
     {
         id: 5,
@@ -138,7 +147,8 @@ export const ProjectsList = [
             {
                 page: "Tenda",
                 img: lucioPage
-            }]
+            }],
+        linkSite: "https://lucio-seven.vercel.app/"
     }
 
 ]
