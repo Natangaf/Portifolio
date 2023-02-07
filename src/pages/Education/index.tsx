@@ -2,10 +2,10 @@ import { useContext, useEffect } from "react"
 import { StylesEducation } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { StyledButtons } from "../../styles/Buttons";
-import { BaseEducation } from "../../base/baseEducation";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
-import { ProjectContext } from "../../context/ProjectContext";
+import { BaseEducation } from "../../base/baseEducation";
+
 
 export function Education() {
     const { slide } = useContext(ProjectContext)
