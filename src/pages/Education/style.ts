@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const StylesEducation = styled(motion.main)`
     padding-top: 80px;
-    height: 89.3vh;
+    height: 100vh;
     width: 100%;
     background-color: var(--bgsecond);
     display: flex;

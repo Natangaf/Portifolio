@@ -5,13 +5,14 @@ import principal from "../../assets/img/background/principal.jpg"
 
 export const StylesHome = styled(motion.main)`
     width: 100%;
-    height: 101vh;
+    height: 105vh;
     background-image: url(${principal});
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     color: var( --Color-grey-0) ;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: absolute;

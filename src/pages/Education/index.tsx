@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { StylesEducation } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { StyledButtons } from "../../styles/Buttons";
@@ -9,6 +9,7 @@ import { ProjectContext } from "../../context/ProjectContext";
 
 export function Education() {
     const { slide } = useContext(ProjectContext)
+
     return (
         <StylesEducation
             variants={slide}

@@ -1,4 +1,3 @@
-
 import { Animation } from "./styles/Animation";
 import { GlobalStyled } from "./styles/GlobalStyled";
 import { ResetCSS } from "./styles/ResetCSS";
@@ -15,6 +14,7 @@ function App() {
       <ResetCSS />
       <Animation />
       <RoutePages />
+    
     </>
   );
 }

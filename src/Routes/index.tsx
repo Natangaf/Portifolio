@@ -1,4 +1,5 @@
-import { Navigate, Route, Routes, useLocation } from "react-router-dom";
+
+import { Navigate, Route, Routes, useLocation, useNavigate, } from "react-router-dom";
 import { Home } from './../pages/Home/index';
 import { About } from './../pages/About/index';
 import { Projects } from './../pages/Projects/index';
@@ -9,7 +10,8 @@ import { AnimatePresence } from 'framer-motion';
 
 
 export function RoutePages() {
-  const location = useLocation();
+  const location = useLocation()
+
   return (
     <AnimatePresence >
       <Routes location={location} key={location.key}>

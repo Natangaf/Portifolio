@@ -1,11 +1,12 @@
-import  { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { StyledTypography } from "../../components/baseTypography/style";
 import { Languages } from "../../components/languages";
 import { StylesAbout } from "./style";
 import { ProjectContext } from "../../context/ProjectContext";
 
 export function About() {
-    const { slide } = useContext(ProjectContext)
+    const { slide,  } = useContext(ProjectContext) 
+
     return (
         <StylesAbout
             variants={slide}

@@ -4,7 +4,7 @@ import contact from "../../assets/img/background/contact.jpg"
 
 export const StylesContact = styled(motion.main)`
     padding-top: 80px;
-    height: 89.3vh;
+    height: 100vh;
     width: 100%;
     background-image: url(${contact});
     background-repeat: no-repeat;

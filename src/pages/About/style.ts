@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 export const StylesAbout = styled(motion.main)`
     background-color: var(--bgsecond);
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
