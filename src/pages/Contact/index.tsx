@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import  { useContext } from "react"
 import { StylesContact } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { InputsContact } from "../../components/InputsContact";
@@ -6,7 +6,8 @@ import { StyledButtons } from "../../styles/Buttons";
 import { ProjectContext } from "../../context/ProjectContext";
 
 export function Contact() {
-    const { slide } = useContext(ProjectContext)
+    const { slide  } = useContext(ProjectContext)
+   
     return (
         <StylesContact
             variants={slide}

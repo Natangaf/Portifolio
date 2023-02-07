@@ -43,8 +43,8 @@ export interface iProjecProviderProps {
 export interface iProjecProviderValue {
   Idproject: number,
   setIdproject: React.Dispatch<React.SetStateAction<number>>,
-  BaseProjects: IProductprops[]
-  slide: Variants
+  BaseProjects: IProductprops[],
+  slide: Variants,
 }
 export interface iImgLanguages {
   language: string

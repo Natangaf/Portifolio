@@ -20,7 +20,8 @@ export const GlobalStyled = createGlobalStyle`
 }
 body{
   font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
   background-color: var(--Color-gray-100);
 }
 ::-webkit-scrollbar {
