@@ -8,16 +8,16 @@ import { StylesAside } from "./style";
 export function Aside() {
   return (
     <StylesAside>
-      <a href="https://github.com/Natangaf">
+      <a href="https://github.com/Natangaf" target="_blank">
         <img src={github} alt="Github" />
       </a>
-      <a href="https://www.linkedin.com/in/natanga/">
+      <a href="https://www.linkedin.com/in/natangaf" target="_blank">
         <img src={Linkedin} alt="Linkedin" />
       </a>
-      <a href="https://www.instagram.com/natanga.f">
+      <a href="https://www.instagram.com/natangaf" target="_blank">
         <img src={Instagram} alt="Instagram" />
       </a>
-      <a href="https://www.facebook.com/Natanque/">
+      <a href="https://www.facebook.com/natangaf" target="_blank">
         <img src={Facebook} alt="Facebook" />
       </a>
     </StylesAside>

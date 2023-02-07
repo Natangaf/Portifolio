@@ -1,9 +1,10 @@
-import React from "react"
-import { Link } from "react-router-dom";
+
+import { Link, useLocation } from "react-router-dom";
 import { StyledTypography } from "../baseTypography/style"
 import { StylesHeader } from "./style";
 
 export function Header() {
+  const location = useLocation()
   return (
     <StylesHeader>
       <div className="head">
@@ -16,11 +17,11 @@ export function Header() {
           </StyledTypography>
         </div>
         <nav className="navegation">
-          <Link to="/">HOME</Link>
-          <Link to="/About">SOBRE</Link>
-          <Link to="/Projects">PROJETOS</Link>
-          <Link to="/Education">EDUCAÇÃO</Link>
-          <Link to="/Contact">CONTATO</Link>
+          <Link to="/" className={location.pathname == "/" ? "selected" : ""} >HOME</Link>
+          <Link to="/About" className={location.pathname == "/About" ? "selected" : ""}>SOBRE</Link>
+          <Link to="/Projects" className={location.pathname == "/Projects" ? "selected" : ""}>PROJETOS</Link>
+          <Link to="/Education" className={location.pathname == "/Education" ? "selected" : ""}>EDUCAÇÃO</Link>
+          <Link to="/Contact" className={location.pathname == "/Contact" ? "selected" : ""}>CONTATO</Link>
         </nav>
       </div>
     </StylesHeader>

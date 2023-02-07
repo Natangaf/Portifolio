@@ -17,5 +17,6 @@ export const StylesInputs = styled.div`
     background-color: transparent;
     outline: none;
     border: 0px solid transparent;
+    color: var(--colorSecond);
   }
 `

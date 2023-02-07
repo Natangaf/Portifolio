@@ -1,9 +1,10 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 import contact from "../../assets/img/background/contact.jpg"
 
-export const StylesContact = styled.main`
+export const StylesContact = styled(motion.main)`
     padding-top: 80px;
-    height: 89.3vh;
+    height: 100vh;
     width: 100%;
     background-image: url(${contact});
     background-repeat: no-repeat;
@@ -12,6 +13,8 @@ export const StylesContact = styled.main`
     display: flex;
     justify-content: center;
     align-items: center;
+     position: absolute;
+
     .container{
         width: 80%;
         height: 90%;

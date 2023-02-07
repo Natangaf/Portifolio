@@ -1,14 +1,17 @@
+import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StylesEducation = styled.main`
+export const StylesEducation = styled(motion.main)`
     padding-top: 80px;
-    height: 89.3vh;
+    height: 100vh;
     width: 100%;
     background-color: var(--bgsecond);
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
+     position: absolute;
+
     div{
         height:30%;
         width: 90%;

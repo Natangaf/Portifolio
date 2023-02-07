@@ -1,15 +1,16 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
 
-export const StylesAbout = styled.main`
+export const StylesAbout = styled(motion.main)`
     background-color: var(--bgsecond);
     width: 100%;
-    height: 100vh;
+    height: 105vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
+ position: absolute;
 
 .practicingValue{
     height: 50%;

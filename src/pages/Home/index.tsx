@@ -1,12 +1,25 @@
-import React from "react"
+import { useContext, useEffect } from "react"
 import { StylesHome } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { TypeAnimation } from "react-type-animation"
+import { ProjectContext } from "../../context/ProjectContext";
 import eu from "../../assets/img/perfil/eu.jpg"
+import { NextPage } from "../../components/Footer";
+
 
 export function Home() {
+  const { slide } = useContext(ProjectContext)
+
   return (
-    <StylesHome>
+    <StylesHome
+      variants={slide}
+      animate="mostrar"
+      initial="inicial"
+      exit="esconder"
+      transition={{
+        type: "just"
+      }}
+    >
       <div className="descripition">
         <div className="person">
           <div className="me">
@@ -25,6 +38,7 @@ export function Home() {
         <img src={eu} alt="" className="natangaImage">
         </img>
       </div>
+      <NextPage />
     </StylesHome >
   )
 }
