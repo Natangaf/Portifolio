@@ -20,7 +20,9 @@ export interface IProductprops {
   description: string;
   background: string;
   usedLanguages: string[];
-  images: iImagesProject[]
+  images: iImagesProject[];
+  linkRepo?: string,
+  linkSite?: string
 }
 export interface iImagesProject {
   page: string,
