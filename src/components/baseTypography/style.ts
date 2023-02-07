@@ -33,7 +33,8 @@ export const StyledTypography = styled(BaseTypography)`
         `;
       case "Heading3":
         return css`
-            font-size: 12rem;
+            color:var(--colorPrimary);
+            font-size: 5rem;
             font-weight: 500;
             margin-right: -0.25rem;
             margin-bottom: 3.125rem;

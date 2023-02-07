@@ -21,7 +21,7 @@ export const GlobalStyled = createGlobalStyle`
 body{
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  overflow-y: scroll;
+  /* overflow-y: scroll; */
   background-color: var(--Color-gray-100);
 }
 ::-webkit-scrollbar {
