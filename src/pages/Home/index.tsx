@@ -20,25 +20,26 @@ export function Home() {
         type: "just"
       }}
     >
-      <div className="descripition">
-        <div className="person">
-          <div className="me">
-            <TypeAnimation
-              sequence={[`Natã Fernandes`, 2000, `Natangaf`, 1000]}
-              speed={10}
-              wrapper="p"
-              repeat={Infinity}
-              className="body" />
+      <div className="container">
+        <div className="descripition">
+          <div className="person">
+            <div className="me">
+              <TypeAnimation
+                sequence={[`Natã Fernandes`, 2000, `Natangaf`, 1000]}
+                speed={10}
+                wrapper="p"
+                repeat={Infinity}
+                className="body" />
+            </div>
+            <StyledTypography tag="h2" classText="Heading1">Front-end Web</StyledTypography>
+            <StyledTypography tag="h2" classText="Heading1" className="primary">
+              Developer
+            </StyledTypography>
           </div>
-          <StyledTypography tag="h2" classText="Heading1">Front-end Web</StyledTypography>
-          <StyledTypography tag="h2" classText="Heading1" className="primary">
-            Developer
-          </StyledTypography>
+          <img src={eu} alt="" className="natangaImage">
+          </img>
         </div>
-        <img src={eu} alt="" className="natangaImage">
-        </img>
-      </div>
-      <NextPage />
+      </div >
     </StylesHome >
   )
 }
