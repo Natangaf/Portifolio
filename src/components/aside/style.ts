@@ -20,4 +20,7 @@ export const StylesAside = styled.aside`
         height: 20px;
         width: 20px;
     }
+    @media (max-width: 600px) {
+    display: none;
+}
 `

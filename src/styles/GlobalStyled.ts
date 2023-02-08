@@ -21,9 +21,9 @@ export const GlobalStyled = createGlobalStyle`
 body{
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
-  /* overflow-y: scroll; */
   background-color: var(--Color-gray-100);
 }
+
 ::-webkit-scrollbar {
   width: 7px;
 }
@@ -35,5 +35,14 @@ body{
 ::-webkit-scrollbar-thumb {
   background-color: var(--colorPrimary);
 }
-
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+@media (max-width: 1000px) {
+.container{
+  margin: 0 auto;
+  width: 100vw;
+}
+}
 `;
