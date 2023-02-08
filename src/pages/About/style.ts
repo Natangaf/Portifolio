@@ -7,14 +7,18 @@ export const StylesAbout = styled(motion.main)`
     width: 100%;
     height: 105vh;
     display: flex;
+    align-items: center;
+.container{
+    height: 100%;
+    display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
- position: absolute;
-
+}
 .practicingValue{
     height: 50%;
-    width:30%;
+    width:40%;
     text-align: right;
     border: 1px solid var(--Color-grey-50);
     border-right: none;
@@ -31,7 +35,7 @@ export const StylesAbout = styled(motion.main)`
 }
 .experience {
     height: 70%;
-    width: 40%;
+    width: 50%;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -39,7 +43,7 @@ export const StylesAbout = styled(motion.main)`
 }
 .experience>div {
     height: 20%;
-    width: 50%;
+    width: 70%;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -49,5 +53,30 @@ export const StylesAbout = styled(motion.main)`
 .experienceDescripition {
     color: var(--Color-grey-50);
 }
+@media (max-width: 1000px) {
+.container{
+    height: 90%;
+    flex-direction: column;
+    flex-wrap: nowrap
+}
+.practicingValue{
+    height: 30%;
+    width: 80%;
+    text-align: right;
+    border: 1px solid var(--Color-grey-50);
+    border-right: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start
+}
+.experience {
+    height: 50%;
+    width: 80%;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end
+}
 
+}
 `

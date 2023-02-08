@@ -15,7 +15,7 @@ export function Contact() {
             initial="inicial"
             exit="esconder"
             transition={{
-                type: "just"
+                duration: 1,
             }}
         >
             <div className="container">

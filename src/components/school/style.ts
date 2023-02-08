@@ -14,4 +14,16 @@ export const StylesSchool = styled.li`
         flex-direction: column;
         gap: 20px;
     }
+    
+    @media (max-width: 1000px) {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    }
+     div{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+    }
 `
