@@ -4,7 +4,7 @@ import { ReactElement } from "react"
 import { StylesCardProject } from "./style";
 import { StyledTypography } from "../baseTypography/style";
 import { StyledButtons } from "../../styles/Buttons";
-import { ProjectsList } from "../../base/baseProjects";
+import { ProjectsList } from "../../base/BaseProjects";
 import AliceCarousel from "react-alice-carousel";
 import { useNavigate } from "react-router-dom";
 import { ProjectContext } from "../../context/ProjectContext";
