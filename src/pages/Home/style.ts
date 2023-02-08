@@ -28,7 +28,7 @@ export const StylesHome = styled(motion.main)`
             display: flex;
             justify-content: center;
             align-items: center;
-            
+            align-content: center;
         }
         .descripition > img{
             animation: circle-in-hesitate 2s;

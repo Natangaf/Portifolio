@@ -92,5 +92,35 @@ export const StylesProject = styled.main`
       transition: 0.5s ease-in;
      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
     }
-  
+    .home{
+      width: 60px;
+      height: 30px;
+      border-radius: 50%;
+      position: absolute;
+      bottom: 5%;
+      right: 10%;
+    }
+  @media (max-width:1000px) {
+    .containerDiv{
+      margin-top: 180px;
+      height: 100%;
+      flex-direction: column;
+      align-items: center;
+    }
+     div{
+      width: 100%;
+      height: 40%;
+    }
+    figure{
+      width: 100%;
+      height: 600px;
+    }
+    .apresentation{
+      height: 60px;
+    }
+    .home{
+      bottom: 0%;
+      right: 10%;
+    }
+  }
 `

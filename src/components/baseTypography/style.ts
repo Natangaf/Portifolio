@@ -36,8 +36,7 @@ export const StyledTypography = styled(BaseTypography)`
             color:var(--colorPrimary);
             font-size: 5rem;
             font-weight: 500;
-            margin-right: -0.25rem;
-            margin-bottom: 3.125rem;
+            
         `;
       case "Heading4":
         return css`
@@ -90,15 +89,13 @@ export const StyledTypography = styled(BaseTypography)`
       case "Heading2":
         return css`
           font-weight: 400;
-          font-size:3.125rem;
+          font-size:2.125rem;
         `;
       case "Heading3":
         return css`
             color:var(--colorPrimary);
             font-size: 5rem;
             font-weight: 500;
-            margin-right: -0.25rem;
-            margin-bottom: 3.125rem;
         `;
       case "Heading4":
         return css`
@@ -118,7 +115,7 @@ export const StyledTypography = styled(BaseTypography)`
         `;
       case "Body":
         return css`
-          font-size: 1.675rem;
+          font-size: 1rem;
           font-weight: 400;
         `;
       case "BodyColor":

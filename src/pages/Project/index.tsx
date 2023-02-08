@@ -7,8 +7,11 @@ import { IProductprops, iImagesProject } from "../../interface"
 import { ProjectsList } from "../../base/baseProjects"
 import { motion } from 'framer-motion';
 import { StyledTypography } from './../../components/baseTypography/style';
+import { Link } from 'react-router-dom';
 import github from '../../assets/icons/github.svg'
 import word from '../../assets/icons/word.svg'
+import home from '../../assets/icons/home.svg'
+
 export function Project() {
     const { Idproject } = useContext(ProjectContext)
     const [project, setProject] = useState({} as IProductprops)
@@ -70,7 +73,7 @@ export function Project() {
                     initial="hidden"
                     animate="visible"
                 >
-                    {project.images && <motion.img src={project.images[img].img} />}
+                    {project.images && <motion.img src={project.images[img].img} className="apresentationImg" />}
                     <div className="apresentation">
                         {project?.images?.map((img, i) =>
                             <motion.img
@@ -85,7 +88,9 @@ export function Project() {
                     </div>
                 </motion.figure>
             </div>
-            
+            <Link to="/Projects" className="home">
+                <img src={home} alt="" />
+            </Link>
         </StylesProject >
     )
 
