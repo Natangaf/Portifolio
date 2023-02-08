@@ -11,7 +11,6 @@ export const StylesHeader = styled.header`
 
 .head {
     height: 70px;
-    width: 90vw;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
