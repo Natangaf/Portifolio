@@ -2,7 +2,7 @@ import { BaseTypography } from ".";
 import styled, { css } from "styled-components";
 
 interface IStyledTypography {
-  classText: "Title" | "Title1.2" | "Heading1" | "Heading1.2" | "Heading2" | "Heading3" | "Heading4" | "Heading" | "HeadingColorTwo" | "Body"  | "BodyColor" | "Caption" | "practicing"
+  classText: "Title" | "Title1.2" | "Heading1" | "Heading1.2" | "Heading2" | "Heading3" | "Heading4" | "Heading" | "HeadingColorTwo" | "Body" | "BodyColor" | "BodyError" | "Caption" | "practicing"
 }
 
 export const StyledTypography = styled(BaseTypography)`
@@ -66,8 +66,15 @@ export const StyledTypography = styled(BaseTypography)`
           font-size: 14px;
           line-height: 20px;
         `;
+      case "BodyError":
+        return css`
+          color:red;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+        `;
     }
-}}
+  }}
   @media (max-width: 600px) {
       ${({ classText }: IStyledTypography) => {
     switch (classText) {
@@ -126,5 +133,5 @@ export const StyledTypography = styled(BaseTypography)`
           line-height: 20px;
         `;
     }
-  	}}}
+  }}}
 `;

@@ -14,9 +14,7 @@ export const StylesContact = styled(motion.main)`
     justify-content: center;
     align-items: center;
     position: absolute;
-    h2{
-        max-width: 60%;
-    }
+
     &>div{
         display: flex;
         flex-direction: row;
@@ -33,7 +31,9 @@ export const StylesContact = styled(motion.main)`
     span{
         color: var(--colorPrimary);
     }
-    
+    .error{
+       height: 30px; 
+    }
     @media (max-width: 1000px) {
     .container{
         display: flex;

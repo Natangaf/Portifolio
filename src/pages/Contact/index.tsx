@@ -1,13 +1,53 @@
-import  { useContext } from "react"
+import { useContext, useState } from "react"
+import { useForm } from "react-hook-form";
+import { yupResolver } from "@hookform/resolvers/yup";
+import emailjs from "@emailjs/browser"
+import { toast } from "react-toastify";
 import { StylesContact } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { InputsContact } from "../../components/InputsContact";
 import { StyledButtons } from "../../styles/Buttons";
 import { ProjectContext } from "../../context/ProjectContext";
+import { schemaContact } from './schemaContact';
+import { FormValues } from "../../interface";
+import { Loader } from "../../components/Loader";
+
+
+
 
 export function Contact() {
-    const { slide  } = useContext(ProjectContext)
-   
+    const [send, setSend] = useState(false)
+    const { slide } = useContext(ProjectContext)
+    const {
+        register,
+        handleSubmit,
+        formState: { errors },
+        reset
+    } = useForm<FormValues>({
+        mode: "onBlur",
+        resolver: yupResolver(schemaContact)
+    });
+
+    const onSubmit = handleSubmit(async (data) => {
+        setSend(!send)
+        const tamplateParams = {
+            from_name: data.name,
+            message: data.mensage,
+            email: data.email
+        }
+
+        try {
+            const response = await emailjs.send("service_zfrc958", "template_rx5pyum", tamplateParams, "ptJ1nHgaX-ms2AHkj")
+            toast.success("Já , ja entro em contato")
+            reset()
+        } catch (error) {
+            console.log(error);
+            toast.error("algo deu Errado mais Ja vamos arrumar ")
+        } finally {
+            setSend(false)
+        }
+    });
+
     return (
         <StylesContact
             variants={slide}
@@ -31,11 +71,31 @@ export function Contact() {
                     <StyledTypography classText="Body" tag="h2">
                         Vamos tomar um café e <span>bater papo comigo</span>
                     </StyledTypography >
-                    <form >
-                        <InputsContact name="Nome" label="Seu nome" />
-                        <InputsContact name="Email" label="Seu Email" />
-                        <InputsContact name="Mensagem" label="Mensagem" />
-                        <StyledButtons nameButtons="buttonSend">Enviar</StyledButtons>
+                    <form onSubmit={onSubmit} noValidate>
+                        <InputsContact name="Nome" label="Seu nome" register={register("name")} />
+                        {errors.name?.message ?
+                            <StyledTypography classText="BodyError" className="error" tag="p">
+                                {errors.name.message}
+                            </StyledTypography>
+                            : <StyledTypography classText="BodyError" className="error" tag="p">
+                            </StyledTypography>}
+                        <InputsContact name="Email" label="Seu Email" register={register("email")} />
+                        {errors.email?.message ?
+                            <StyledTypography classText="BodyError" className="error" tag="p">
+                                {errors.email.message}
+                            </StyledTypography>
+                            : <StyledTypography classText="BodyError" className="error" tag="p">
+                            </StyledTypography>}
+                        <InputsContact name="Mensagem" label="Mensagem" register={register("mensage")} />
+                        {errors.mensage?.message ?
+                            <StyledTypography classText="BodyError" className="error" tag="p">
+                                {errors.mensage.message}
+                            </StyledTypography>
+                            : <StyledTypography classText="BodyError" className="error" tag="p">
+                            </StyledTypography>}
+                        <StyledButtons nameButtons="buttonSend">
+                            {send ? <Loader /> : "Enviar"}
+                        </StyledButtons>
                     </form>
                 </section>
             </div>
