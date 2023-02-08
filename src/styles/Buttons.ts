@@ -25,6 +25,9 @@ ${({ nameButtons }: InameButtons) => {
                 color: var(--colorSecond);
                 font-size: 14px;
                 border: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             `;
         }
     }

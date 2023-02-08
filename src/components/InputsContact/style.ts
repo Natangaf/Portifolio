@@ -4,7 +4,6 @@ export const StylesInputs = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 20px 0;
   border-bottom: 1px solid var(--Color-grey-50);
   padding: 10px 0;
   label{
@@ -17,6 +16,10 @@ export const StylesInputs = styled.div`
     background-color: transparent;
     outline: none;
     border: 0px solid transparent;
+    color: var(--colorSecond);
+  }
+  input:active{
+    background-color: transparent;
     color: var(--colorSecond);
   }
 `

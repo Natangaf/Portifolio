@@ -1,3 +1,5 @@
+import { UseFormRegisterReturn } from "react-hook-form/dist/types";
+
 export interface ISchool {
   id: number;
   img: any;
@@ -13,6 +15,7 @@ export interface ISchoolelement {
 export interface IinputsContact {
   name: string;
   label: string;
+  register: UseFormRegisterReturn;
 }
 export interface IProductprops {
   id: number;
@@ -54,3 +57,8 @@ export interface iImgLanguages {
 interface Variants {
   [key: string]: any
 }
+export type FormValues = {
+  name: string;
+  email: string;
+  mensage: string;
+};
