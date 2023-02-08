@@ -1,7 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import { iProjecProviderProps, iProjecProviderValue } from "../interface";
-import { ProjectsList } from "../base/baseProjects";
 import { useNavigate } from 'react-router-dom';
+import { ProjectsList } from "../base/BaseProjects";
 
 export const ProjectContext = createContext({} as iProjecProviderValue)
 

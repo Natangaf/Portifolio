@@ -4,7 +4,7 @@ import { ProjectContext } from "../../context/ProjectContext"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { IProductprops, iImagesProject } from "../../interface"
-import { ProjectsList } from "../../base/baseProjects"
+import { ProjectsList } from "../../base/BaseProjects"
 import { motion } from 'framer-motion';
 import { StyledTypography } from './../../components/baseTypography/style';
 import { Link } from 'react-router-dom';

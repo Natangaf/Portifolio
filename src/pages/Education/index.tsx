@@ -4,7 +4,7 @@ import { StyledTypography } from "../../components/baseTypography/style";
 import { StyledButtons } from "../../styles/Buttons";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
-import { BaseEducation } from "../../base/baseEducation";
+import { BaseEducation } from "../../base/BaseEducation";
 import { ProjectContext } from "../../context/ProjectContext";
 
 
