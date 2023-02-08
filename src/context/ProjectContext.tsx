@@ -25,29 +25,6 @@ export const ProjectProvider = ({ children }: iProjecProviderProps) => {
 
     const pages = ["/", "/About", "/Projects", "/Education", "/Contact"]
 
-    //     const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-    //     const currentPage = pages.findIndex(page => page === location.pathname);
-    //     const nextPage = currentPage + 1;
-    //     const previusPage = currentPage - 1;
-
-    //     if (scrollTop + clientHeight >= scrollHeight &&
-    //         pages[nextPage] !== location.pathname &&
-    //         pages[nextPage] !== undefined &&
-    //         location.pathname !== "/Project"
-    //     ) {
-    //         navigate(pages[nextPage]);
-    //         window.scrollTo(0, 1)
-    //     }
-    //     if (scrollTop == 0 &&
-    //         pages[previusPage] !== location.pathname &&
-    //         pages[previusPage] !== undefined &&
-    //         location.pathname !== "/Project"
-    //     ) {
-    //         navigate(pages[previusPage]);
-    //         window.scrollTo(0, 1)
-    //     }
-
-    // };
     const handleScroll = () => {
         const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
         const currentPageIndex = pages.findIndex(page => page === location.pathname);

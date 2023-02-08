@@ -13,12 +13,7 @@ export const StylesContact = styled(motion.main)`
     display: flex;
     justify-content: center;
     align-items: center;
-     position: absolute;
-
-    .container{
-        width: 80%;
-        height: 90%;
-    }
+    position: absolute;
     h2{
         max-width: 60%;
     }
@@ -29,7 +24,7 @@ export const StylesContact = styled(motion.main)`
         justify-content: space-around;
     }
     section{
-        width: 40%;
+        width: 50%;
         display: flex;
         flex-direction: column;
         gap: 23px;
@@ -37,5 +32,16 @@ export const StylesContact = styled(motion.main)`
     }
     span{
         color: var(--colorPrimary);
+    }
+    
+    @media (max-width: 1000px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    section{
+        margin: 0 auto;
+        width: 80%;
+    }
     }
     ` 

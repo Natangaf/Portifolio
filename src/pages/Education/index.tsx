@@ -1,4 +1,4 @@
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import { StylesEducation } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { StyledButtons } from "../../styles/Buttons";
@@ -18,22 +18,24 @@ export function Education() {
             initial="inicial"
             exit="esconder"
             transition={{
-                type: "just"
+                duration: 1,
             }}
         >
-            <div>
-                <StyledTypography classText="Heading2" tag="h4">
-                    Educação
-                </StyledTypography>
-                <StyledButtons nameButtons="buttonsections">
-                    Dowload Resume
-                </StyledButtons>
+            <div className="container">
+                <div className="title">
+                    <StyledTypography classText="Heading2" tag="h4">
+                        Educação
+                    </StyledTypography>
+                    <StyledButtons nameButtons="buttonsections">
+                        Dowload Resume
+                    </StyledButtons>
+                </div>
+                <ul>
+                    {BaseEducation?.map((element: ISchool) =>
+                        <School element={element} key={element.id} />
+                    )}
+                </ul>
             </div>
-            <ul>
-                {BaseEducation?.map((element: ISchool) =>
-                    <School element={element} key={element.id} />
-                )}
-            </ul>
         </StylesEducation>
     )
 }

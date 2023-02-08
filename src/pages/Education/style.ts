@@ -6,15 +6,22 @@ export const StylesEducation = styled(motion.main)`
     height: 100vh;
     width: 100%;
     background-color: var(--bgsecond);
+    position: absolute; 
+    .container{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     flex-direction: column;
-     position: absolute;
-
+    }
+    .title{
+        width: 90%;
+        display: flex;
+        
+    }
     div{
         height:30%;
-        width: 90%;
+        width: 100%;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
@@ -22,5 +29,13 @@ export const StylesEducation = styled(motion.main)`
     }
     ul{
         width: 90%;
+    }
+    
+    @media (max-width: 1000px) {
+    .title{
+        flex-direction: column;
+        gap: 20px;
+        justify-content: flex-start;
+    }
     }
 `

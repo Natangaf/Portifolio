@@ -13,7 +13,7 @@ export function Projects() {
             initial="inicial"
             exit="esconder"
             transition={{
-                type: "just"
+                duration: 1,
             }}
         >
             <CardProject />
