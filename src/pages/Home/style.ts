@@ -17,6 +17,7 @@ export const StylesHome = styled(motion.main)`
    justify-content: center;
    position: absolute;
     .container{
+        height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;

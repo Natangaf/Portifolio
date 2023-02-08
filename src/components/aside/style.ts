@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const StylesAside = styled.aside`
+export const StylesAside = styled(motion.aside)`
     height: 100vh;
     width: 30px;
     display: flex;

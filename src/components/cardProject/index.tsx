@@ -24,7 +24,8 @@ export function CardProject() {
     ProjectsList.map((project) =>
         productElement.push(
             <StylesCardProject background={project.background} key={project.id} >
-                <div>
+                <div className="background">
+                    <div className="projectContainer">
                     <StyledTypography tag="h2" classText="Heading1">
                         {project.name}
                     </StyledTypography>
@@ -41,7 +42,8 @@ export function CardProject() {
                         onClick={() => pageProject(project.id)}
                     >
                         Ver Projeto
-                    </StyledButtons>
+                        </StyledButtons>
+                    </div>
                 </div>
             </ StylesCardProject>
         )
