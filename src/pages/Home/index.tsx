@@ -1,10 +1,9 @@
-import { useContext, useEffect } from "react"
+import { useContext} from "react"
 import { StylesHome } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { TypeAnimation } from "react-type-animation"
 import { ProjectContext } from "../../context/ProjectContext";
 import eu from "../../assets/img/perfil/eu.jpg"
-import { NextPage } from "../../components/Footer";
 
 
 export function Home() {

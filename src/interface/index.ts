@@ -1,4 +1,5 @@
 import { UseFormRegisterReturn } from "react-hook-form/dist/types";
+import { Project } from './../pages/Project/index';
 
 export interface ISchool {
   id: number;
@@ -26,6 +27,9 @@ export interface IProductprops {
   images: iImagesProject[];
   linkRepo?: string,
   linkSite?: string
+}
+export type TProductprops = {
+  project: IProductprops;
 }
 export interface iImagesProject {
   page: string,

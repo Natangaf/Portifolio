@@ -12,9 +12,6 @@ import { schemaContact } from './schemaContact';
 import { FormValues } from "../../interface";
 import { Loader } from "../../components/Loader";
 
-
-
-
 export function Contact() {
     const [send, setSend] = useState(false)
     const { slide } = useContext(ProjectContext)
@@ -28,25 +25,26 @@ export function Contact() {
         resolver: yupResolver(schemaContact)
     });
 
-    const onSubmit = handleSubmit(async (data) => {
+    const onSubmit = handleSubmit(async ({ name, email, mensage }) => {
         setSend(!send)
         const tamplateParams = {
-            from_name: data.name,
-            message: data.mensage,
-            email: data.email
+            from_name: name,
+            message: mensage,
+            email
         }
 
         try {
             const response = await emailjs.send("service_zfrc958", "template_rx5pyum", tamplateParams, "ptJ1nHgaX-ms2AHkj")
-            toast.success("Já , ja entro em contato")
+            toast.success("Já, já entro em contato")
             reset()
         } catch (error) {
             console.log(error);
-            toast.error("algo deu Errado mais Ja vamos arrumar ")
+            toast.error("Algo deu errado, mas já vamos arrumar")
         } finally {
             setSend(false)
         }
     });
+
 
     return (
         <StylesContact

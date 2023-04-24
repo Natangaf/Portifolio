@@ -2,6 +2,8 @@ import { CardProject } from "../../components/cardProject";
 import { StylesProjects } from "./style";
 import { useContext } from 'react';
 import { ProjectContext } from "../../context/ProjectContext";
+import { ProjectsList } from './../../base/BaseProjects/index';
+import { IProductprops } from "../../interface";
 
 export function Projects() {
     const { slide } = useContext(ProjectContext)
@@ -16,7 +18,13 @@ export function Projects() {
                 duration: 1,
             }}
         >
-            <CardProject />
+            <ul>
+                {
+
+                    ProjectsList.map((project: IProductprops) => <CardProject project={project} key={project.id} />)
+                }
+
+            </ul>
         </StylesProjects>
     )
 }

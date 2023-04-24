@@ -6,19 +6,14 @@ export const StylesProjects = styled(motion.main)`
     width: 100vw;
     height: 105vh;
     background-color: var(--Color-gray-100);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    position: absolute;
-
-    .alice-carousel{
-         box-shadow: 0px 0px 20px 43px var(--Color-gray-150);
-    }
-    .alice-carousel__dots{
+    transition: all 0.5;
+    ul{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        display: flex;
         position: absolute;
-        bottom: 30px;
-        left: 45%;
+        transition: 0.5;
     }
   
 `
