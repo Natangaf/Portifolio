@@ -20,11 +20,11 @@ export function About() {
             <div className="container">
                 <div className="practicingValue">
                     <div className="practicingTime">
-                        <StyledTypography tag="p" classText="Number">2</StyledTypography>
+                        <StyledTypography tag="p" classText="Number">1</StyledTypography>
                         <StyledTypography tag="p" classText="Heading3" className="color">.</StyledTypography>
                     </div>
                     <StyledTypography tag="p" classText="Body">
-                        Anos de pratica</StyledTypography>
+                        Ano de pratica</StyledTypography>
                 </div>
                 <div className="experience">
                     <div>

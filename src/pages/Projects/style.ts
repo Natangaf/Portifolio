@@ -65,7 +65,6 @@ export const StylesProjects = styled(motion.main)`
 
 }
 
-
 .swiper-pagination .swiper-pagination-bullet {
   filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
 }

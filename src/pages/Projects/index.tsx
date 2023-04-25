@@ -10,6 +10,8 @@ import 'swiper/css/navigation';
 import { IProductProps } from "../../interface";
 import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { ProjectContext } from "../../context/ProjectContext";
+import { CardProject } from '../../components/cardProject/index';
+import { ProjectsList } from "../../base/BaseProjects";
 
 export function Projects() {
     const { slide } = useContext(ProjectContext)
@@ -47,8 +49,8 @@ export function Projects() {
             >
                 {
                     ProjectsList.map((project: IProductProps) =>
-                        <SwiperSlide>
-                            <CardProject project={project} key={project.id} />
+                        <SwiperSlide key={project.id} >
+                            <CardProject project={project} />
                         </SwiperSlide>)
                 }
                 <div className="slider-controler">

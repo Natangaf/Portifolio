@@ -18,9 +18,6 @@ export const StylesCardProject = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
-    :hover{
-        width:70%
-    }
     .background{
         background-color:var(--Color-gray-150);
         width:100%;
