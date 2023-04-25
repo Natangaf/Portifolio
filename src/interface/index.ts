@@ -17,7 +17,9 @@ export interface IinputsContact {
   label: string;
   register: UseFormRegisterReturn;
 }
-export interface IProductprops {
+
+
+export interface IProductProps {
   id: number;
   name: string;
   description: string;
@@ -35,6 +37,9 @@ export interface iProjectCard {
   imagesProject: iImagesProject
 }
 
+export interface ICardProjectProps {
+  project: IProductProps;
+}
 export interface IPropsMaquinadeEscrever {
   text: string;
   delay: number;
@@ -48,7 +53,7 @@ export interface iProjecProviderProps {
 export interface iProjecProviderValue {
   Idproject: number,
   setIdproject: React.Dispatch<React.SetStateAction<number>>,
-  BaseProjects: IProductprops[],
+  BaseProjects: IProductProps[],
   slide: Variants,
 }
 export interface iImgLanguages {

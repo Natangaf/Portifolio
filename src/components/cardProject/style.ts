@@ -9,7 +9,7 @@ export const StylesCardProject = styled.div`
         return css`
             background-image:url(${background});
     `}}
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -52,5 +52,6 @@ export const StylesCardProject = styled.div`
   margin: 0 auto;
   width: 100vw;
 }
+
 }
 `

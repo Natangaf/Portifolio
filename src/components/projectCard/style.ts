@@ -17,6 +17,7 @@ export const StylesProjectCard = styled.div`
     align-items: center;
     div{
         background-color:var(--Color-gray-150);
+        background-color:red;
         width:100%;
         height: 100%;
         padding:200px;

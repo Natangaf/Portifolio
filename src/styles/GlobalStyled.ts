@@ -7,7 +7,7 @@ export const GlobalStyled = createGlobalStyle`
   --bgcolor:rgba(0, 0, 0, 0.678);
   --bgcolor2:rgba(0, 0, 0, 0.10);
   --bgsecond:#161616;
-  --Color-gray-150:#333333e6;
+  --Color-gray-150:#a1a1a180;
   --Color-gray-100:#333333;
   --Color-grey-50:rgba(255, 255, 255, .4);
   --Color-grey-20:#E0E0E0;
