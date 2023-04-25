@@ -6,6 +6,7 @@ import { StyledButtons } from "../../styles/Buttons";
 import { ProjectsList } from "../../base/BaseProjects";
 import { ProjectContext } from "../../context/ProjectContext";
 import { ImgLanguages } from './../imgLanguages/imgLanguages';
+import { AliceCarousel } from 'react-alice-carousel';
 
 
 
@@ -48,7 +49,17 @@ export function CardProject() {
     )
 
     return (
-        <AutoplaySlider cssModule={styles}>
-        </AutoplaySlider>
+        <AliceCarousel 
+            mouseTracking
+            touchTracking
+            items={productElement}
+            controlsStrategy="alternate"
+            disableButtonsControls
+            animationDuration={7000}
+            autoPlay
+            paddingLeft={0}
+            autoPlayStrategy="none"
+            infinite
+        />
     )
 }
