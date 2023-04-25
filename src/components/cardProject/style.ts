@@ -18,6 +18,9 @@ export const StylesCardProject = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    :hover{
+        width:70%
+    }
     .background{
         background-color:var(--Color-gray-150);
         width:100%;
@@ -26,6 +29,10 @@ export const StylesCardProject = styled.div`
 
     }
     .projectContainer{
+        visibility: hidden;
+    }
+    .projectContainer:hover{
+        visibility: visible;
         margin:0 auto;
         width:70%;
         height: 100%;

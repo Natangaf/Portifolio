@@ -49,11 +49,6 @@ export const StylesHome = styled(motion.main)`
             font-size: 1.675rem;
             font-weight: 400;
         }
-            
-        .Heading1{
-            font-weight: 400;
-            font-size: 7rem;
-            }
         .primary{
             color: var(--colorPrimary);
         }
