@@ -3,7 +3,7 @@ import { useContext, useEffect } from 'react';
 import { ProjectContext } from "../../context/ProjectContext"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
-import { IProductprops, iImagesProject } from "../../interface"
+import { IProductProps, iImagesProject } from "../../interface"
 import { ProjectsList } from "../../base/BaseProjects"
 import { motion } from 'framer-motion';
 import { StyledTypography } from './../../components/baseTypography/style';
@@ -14,12 +14,12 @@ import home from '../../assets/icons/home.svg'
 
 export function Project() {
     const { Idproject } = useContext(ProjectContext)
-    const [project, setProject] = useState({} as IProductprops)
+    const [project, setProject] = useState({} as IProductProps)
     const [img, setImg] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
-        const project: IProductprops | undefined = ProjectsList.find((pro) => pro.id == Idproject)
+        const project: IProductProps | undefined = ProjectsList.find((pro) => pro.id == Idproject)
         if (project) {
             setProject(project)
         } else {
