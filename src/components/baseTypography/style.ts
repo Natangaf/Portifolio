@@ -1,6 +1,5 @@
 import { BaseTypography } from ".";
 import styled, { css } from "styled-components";
-
 interface IStyledTypography {
   classText: "Number" | "Title" | "Title1.2" | "Heading1" | "Heading1.2" | "Heading2" | "Heading3" | "Heading4" | "Heading" | "HeadingColorTwo" | "Body" | "BodyColor" | "BodyError" | "Caption" | "practicing"
 }
@@ -8,7 +7,7 @@ interface IStyledTypography {
 export const StyledTypography = styled(BaseTypography)`
   color: var(--colorSecond);
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Jost', sans-serif;
 ${({ classText }: IStyledTypography) => {
     switch (classText) {
       case "Number":
@@ -66,8 +65,8 @@ ${({ classText }: IStyledTypography) => {
       case "BodyColor":
         return css`
       color: var(--Color-grey-50);
-      font-weight: 400;
-      font-size: 0.875rem;
+      font-weight: 200;
+      font-size: 1rem;
       line-height: 1.25rem;
     `;
       case "BodyError":
@@ -89,7 +88,7 @@ ${({ classText }: IStyledTypography) => {
     `;
     }
   }
-  },
+  }},
     @media(max - width: 600px) {
 ${({ classText }: IStyledTypography) => {
     switch (classText) {

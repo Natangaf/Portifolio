@@ -48,8 +48,8 @@ export function Projects() {
                 className="swiper_container"
             >
                 {
-                    ProjectsList.map((project: IProductProps) =>
-                        <SwiperSlide key={project.id} >
+                    ProjectsList.map((project: IProductProps ,i) =>
+                        <SwiperSlide key={i} >
                             <CardProject project={project} />
                         </SwiperSlide>)
                 }

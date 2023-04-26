@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StylesProjects = styled(motion.main)`
     width: 100vw;
     height: 105vh;
-    background-color: var(--Color-grey-50);
+    background-color: var(--bgcolor2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -71,5 +71,9 @@ export const StylesProjects = styled(motion.main)`
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--colorPrimary);
+}
+.swiper-slide-active{
+  border-radius:3%;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
 }
 `

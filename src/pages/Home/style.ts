@@ -25,17 +25,19 @@ export const StylesHome = styled(motion.main)`
         .descripition{
             width:100% ;
             height: 40%;
-            display: flex;
-            justify-content: center;
+            display: flex;   
+            justify-content: space-between;
             align-items: center;
             align-content: center;
         }
-        .descripition > img{
-            animation: circle-in-hesitate 2s;
-            height: auto;
-            height: 99%;
-            border-radius: 50%;
-            border: 5px solid var(--colorSecond);
+        .natangaImage{
+            height: 250px;
+           width: 400px;
+           background-color:red;
+           border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
+        }
+        .natangaImage > img{
+            width: 100%;
         }
         .person{
             width: 50%;
