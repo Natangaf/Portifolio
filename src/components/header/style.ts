@@ -48,7 +48,7 @@ export const StylesHeader = styled(motion.header)`
   }
 
 a{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Jost', sans-serif;
   text-decoration: none;
   font-weight: 500px;
   font-size: 17px;

@@ -1,9 +1,9 @@
-import { useContext} from "react"
+import { useContext } from "react"
 import { StylesHome } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { TypeAnimation } from "react-type-animation"
 import { ProjectContext } from "../../context/ProjectContext";
-import eu from "../../assets/img/perfil/eu.jpg"
+import eu from "../../assets/img/perfil/eu.png"
 
 
 export function Home() {
@@ -22,23 +22,24 @@ export function Home() {
       <div className="container">
         <div className="descripition">
           <div className="person">
+            <StyledTypography tag="h2" classText="Heading1">NATÃ FERNANDES</StyledTypography>
+            <StyledTypography tag="h2" classText="Heading1" className="primary">
+              Developer
+            </StyledTypography>
             <div className="me">
               <TypeAnimation
-                sequence={[`Natã Fernandes`, 2000, `Natangaf`, 1000]}
+                sequence={[`Front-end`, 2000, `Back-end`, 1000]}
                 speed={10}
                 wrapper="p"
                 repeat={Infinity}
                 className="body" />
             </div>
-            <StyledTypography tag="h2" classText="Heading1">Front-end Web</StyledTypography>
-            <StyledTypography tag="h2" classText="Heading1" className="primary">
-              Developer
-            </StyledTypography>
           </div>
-          <img src={eu} alt="" className="natangaImage">
-          </img>
-        </div>
-      </div >
+          <div className="natangaImage" >
+            <img src={eu} alt=""/>
+          </div>
+      </div>
+    </div >
     </StylesHome >
   )
 }

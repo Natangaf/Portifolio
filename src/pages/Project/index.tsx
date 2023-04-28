@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { IProductProps, iImagesProject } from "../../interface"
 import { ProjectsList } from "../../base/BaseProjects"
-import { motion } from 'framer-motion';
+import { delay, motion } from 'framer-motion';
 import { StyledTypography } from './../../components/baseTypography/style';
 import { Link } from 'react-router-dom';
 import github from '../../assets/icons/github.svg'
@@ -13,6 +13,7 @@ import word from '../../assets/icons/word.svg'
 import home from '../../assets/icons/home.svg'
 
 export function Project() {
+    const { slide } = useContext(ProjectContext)
     const { Idproject } = useContext(ProjectContext)
     const [project, setProject] = useState({} as IProductProps)
     const [img, setImg] = useState(0)
@@ -27,6 +28,7 @@ export function Project() {
         }
 
     }, [project])
+    
     const container = {
         hidden: { opacity: 1, scale: 0 },
         visible: {
@@ -47,7 +49,15 @@ export function Project() {
     };
 
     return (
-        <StylesProject>
+        <StylesProject
+            variants={slide}
+            animate="mostrar"
+            initial="inicial"
+            exit="esconder"
+            transition={{
+                duration: 1,
+            }}
+        >
             <div className="containerDiv">
                 <div>
                     <StyledTypography tag="h2" classText="Heading3">

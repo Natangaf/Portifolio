@@ -5,7 +5,7 @@ import styled from "styled-components";
 export const StylesProjects = styled(motion.main)`
     width: 100vw;
     height: 105vh;
-    background-color: var(--Color-grey-50);
+    background-color: var(--bgcolor2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,9 +51,6 @@ export const StylesProjects = styled(motion.main)`
   content: '';
 }
 .slider-arrow {
-    
-} 
-.slider-arrow {
   background: var(--colorSecond);
   width: 3.5rem;
   height: 3.5rem;
@@ -71,5 +68,15 @@ export const StylesProjects = styled(motion.main)`
 
 .swiper-pagination .swiper-pagination-bullet-active {
   background: var(--colorPrimary);
+}
+.swiper-slide-active{
+  border-radius:3%;
+  border: rgba(0,0,0,0.75) 1px;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+}
+.swiper-slide{
+  border-radius:3%;
+  border: rgba(0,0,0,0.75) 1px;
+  -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
 }
 `
