@@ -1,20 +1,25 @@
 import doAcao from "../../assets/img/projects/doAcao/doAcao.png"
+import doAcaoBackground from "../../assets/img/projects/doAcao/doAcaoBackground.png"
 import doAçaoCreateDonatoion from "../../assets/img/projects/doAcao/doAçaoCreateDonatoion.png"
 import doAçaoEditProfile from "../../assets/img/projects/doAcao/doAçaoEditProfile.png"
 import doAçaoHomePage from "../../assets/img/projects/doAcao/doAçaoHomePage.png"
 import nonosBuger from "../../assets/img/projects/nonosBuger/nonosBuger.png"
+import nonosBugerBackground from "../../assets/img/projects/nonosBuger/nonosBugerBackground.png"
 import nonosBugerLogin from "../../assets/img/projects/nonosBuger/nonosBugerLogin.png"
 import nonosBugerCart from "../../assets/img/projects/nonosBuger/nonosBugerCart.png"
 import nonosBugerRegister from "../../assets/img/projects/nonosBuger/nonosBugerRegister.png"
+import nuKenzieBackground from "../../assets/img/projects/nuKenzie/nuKenzieBackground.png"
 import nuKenzie from "../../assets/img/projects/nuKenzie/nuKenzie.png"
 import nuKenzieRegister from "../../assets/img/projects/nuKenzie/nuKenzieRegister.png"
 import RickandMory from "../../assets/img/projects/RickandMory/RickandMory.png"
 import HomePage from "../../assets/img/projects/RickandMory/HomePage.png"
+import rickandMoryBackground from "../../assets/img/projects/RickandMory/Background.png"
 import KenzieHub from "../../assets/img/projects/KenzieHub/KenzieHub.png"
 import KenzieHubLogin from "../../assets/img/projects/KenzieHub/KenzieHubLogin.png"
 import KenzieHubRegister from "../../assets/img/projects/KenzieHub/KenzieHubRegister.png"
 import KenzieHubRegisterNeyLangeuge from "../../assets/img/projects/KenzieHub/KenzieHubRegisterNeyLangeuge.png"
 import lucioHomePage from "../../assets/img/projects/lucioTenda/lucioHomePage.png"
+import lucioHomePageBackground from "../../assets/img/projects/lucioTenda/lucioHomePageBackground.png"
 import lucioPage from "../../assets/img/projects/lucioTenda/lucioPage.png"
 
 
@@ -23,7 +28,7 @@ export const ProjectsList = [{
     id: 1,
     name: "NuKenzie",
     description: "Um sistema de gerenciamento de competências, com o qual o usuário pode agregar seus conhecimentos em qualquer tecnologia, podendo cadastrar, editar ou deletar.",
-    background: nuKenzie,
+    background: nuKenzieBackground,
     usedLanguages: ["react", "css", "javascript"],
     images: [
         {
@@ -67,7 +72,7 @@ export const ProjectsList = [{
     id: 3,
     name: "Rick and Morty",
     description: "Um sistema simples onde você pode encontrar seus personagens favoritos, utilizando a API.",
-    background: RickandMory,
+    background: rickandMoryBackground,
     usedLanguages: ["react", "css", "javascript"],
     images: [
         {
@@ -86,7 +91,7 @@ export const ProjectsList = [{
     id: 4,
     name: "do.Ação",
     description: "Um projeto completo, voltado para ONGs que necessitam de alimentos, com um sistema de gerenciamento de contas, onde o usuário pode cadastrar, deletar, editar e doar.",
-    background: doAcao,
+    background: doAcaoBackground,
     usedLanguages: ["react", "css", "typescript"],
     images: [
         {
@@ -113,7 +118,7 @@ export const ProjectsList = [{
     id: 5,
     name: "Nono's Burger",
     description: "Uma lanchonete onde você pode adicionar e remover lanches",
-    background: nonosBuger,
+    background: nonosBugerBackground,
     usedLanguages: ["react", "css", "typescript"],
     images: [
         {
@@ -140,7 +145,7 @@ export const ProjectsList = [{
     id: 5,
     name: "Lucio",
     description: "Seguir um Figma de um profissional, e entregar com altíssima qualidade, adicionando páginas, botões interativos",
-    background: lucioHomePage,
+    background: lucioHomePageBackground,
     usedLanguages: ["html5", "css", "javascript"],
     images: [
         {

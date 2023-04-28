@@ -38,6 +38,7 @@ export const StylesHome = styled(motion.main)`
         }
         .natangaImage > img{
             width: 100%;
+             //filter:drop-shadow(2px 0px 3px gray);
         }
         .person{
             width: 50%;
