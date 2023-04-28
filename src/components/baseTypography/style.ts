@@ -7,7 +7,6 @@ interface IStyledTypography {
 export const StyledTypography = styled(BaseTypography)`
   color: var(--colorSecond);
   margin: 0;
-  font-family: 'Jost', sans-serif;
 ${({ classText }: IStyledTypography) => {
     switch (classText) {
       case "Number":
@@ -88,8 +87,8 @@ ${({ classText }: IStyledTypography) => {
     `;
     }
   }
-  }},
-    @media(max - width: 600px) {
+  }}
+  @media (max-width: 600px) {
 ${({ classText }: IStyledTypography) => {
     switch (classText) {
       case "Number":
@@ -110,7 +109,7 @@ ${({ classText }: IStyledTypography) => {
       case "Heading1":
         return css`
           font-weight: 400;
-          font-size: 5rem;
+          font-size: 4rem;
         `;
       case "Heading2":
         return css`
