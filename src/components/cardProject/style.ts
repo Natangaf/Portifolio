@@ -47,11 +47,34 @@ export const StylesCardProject = styled.div`
     p{
         width: 60%;
     }
-@media (max-width: 1000px) {
-.container{
-  margin: 0 auto;
-  width: 100vw;
-}
-
+    @media (max-width: 1000px) {
+        .container{
+        margin: 0 auto;
+        width: 100vw;
+        }
+    }
+    @media (max-width: 600px) {
+        
+        .projectContainer{
+        margin:0 auto;
+        width:90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:40px;
+        }
+        figure{
+            height: 40px;
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+        }
+        img{
+            height: 40px;
+        }
+        p{
+            width: 60%;
+        }
 }
 `
