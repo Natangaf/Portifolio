@@ -13,7 +13,6 @@ export function School({ element }: ISchoolelement) {
         <img src={img} alt={name} />
       </div>
       <div>
-        <StyledTypography classText="Body" tag="p">{name}</StyledTypography>
         <StyledTypography classText="Body" tag="p">{resume}</StyledTypography>
         <StyledTypography classText="BodyColor" tag="p">{year}</StyledTypography>
       </div>

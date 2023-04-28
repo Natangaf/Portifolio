@@ -23,7 +23,7 @@ export function Education() {
         >
             <div className="container">
                 <div className="title">
-                    <StyledTypography classText="Heading2" tag="h4">
+                    <StyledTypography classText="Heading1" tag="h4">
                         Educação
                     </StyledTypography>
                     <StyledButtons nameButtons="buttonsections">

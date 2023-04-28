@@ -67,15 +67,18 @@ export const StylesAbout = styled(motion.main)`
     border-right: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start
+    align-items: flex-end;
 }
 .experience {
-    height: 50%;
+    height: 60%;
     width: 80%;
     text-align: right;
     display: flex;
     flex-direction: column;
     align-items: flex-end
+}
+.practicingTime{
+    align-items: baseline
 }
 
 }

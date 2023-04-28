@@ -32,9 +32,9 @@ export const StylesHome = styled(motion.main)`
         }
         .natangaImage{
             height: 250px;
-           width: 400px;
-           background-color:red;
-           border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
+            width: 400px;
+            background-color:red;
+            border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
         }
         .natangaImage > img{
             width: 100%;
@@ -93,12 +93,18 @@ export const StylesHome = styled(motion.main)`
         width: 90%;
         height: auto;
     }
+    .descripition{
+        justify-content: center
+    }
+    .natangaImage{
+        height: 188px;
+        width: 270px;
+        background-color:red;
+        border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
+    }
+    .natangaImage > img{
+        width: 100%;
+    }
 }
-@media (max-width: 600px) {
-    .descripition > img{
-            /* height: 65%; */
-            /* width:51%; */
-            border-radius: 50%;
-        }
-}
+
 `

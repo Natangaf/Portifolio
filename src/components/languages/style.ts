@@ -8,15 +8,8 @@ export const StylesLanguages = styled.ul`
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-around;
-.modulos {
-    height: 80px;
-}
 
-.modulo {
-    width: 100%;
-    flex-direction: row;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-}
+  @media (max-width:600px) {
+    justify-content: space-evenly
+  } 
 `
