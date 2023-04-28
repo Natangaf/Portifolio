@@ -77,7 +77,7 @@ ${({ classText }: IStyledTypography) => {
     `;
     }
   }}
-  @media (max-width: 800px) {
+  @media (max-width: 1000px) {
 ${({ classText }: IStyledTypography) => {
     switch (classText) {
       case "Number":
