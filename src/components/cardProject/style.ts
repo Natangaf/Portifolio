@@ -9,7 +9,7 @@ export const StylesCardProject = styled.div`
         return css`
             background-image:url(${background});
     `}}
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;
@@ -18,12 +18,13 @@ export const StylesCardProject = styled.div`
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius:3%;
     .background{
         background-color:var(--Color-gray-150);
         width:100%;
         height: 100%;
         display: flex;
-
+        border-radius:3%;
     }
     .projectContainer{
         margin:0 auto;
@@ -35,8 +36,7 @@ export const StylesCardProject = styled.div`
         gap:40px;
     }
     figure{
-        height: 4
-        0px;
+        height: 40px;
         display:flex;
         flex-direction:row;
         gap:10px;
@@ -45,12 +45,36 @@ export const StylesCardProject = styled.div`
            height: 40px;
     }
     p{
-        width: 40%;
+        width: 60%;
     }
-@media (max-width: 1000px) {
-.container{
-  margin: 0 auto;
-  width: 100vw;
-}
+    @media (max-width: 1000px) {
+        .container{
+        margin: 0 auto;
+        width: 100vw;
+        }
+    }
+    @media (max-width: 600px) {
+        
+        .projectContainer{
+        margin:0 auto;
+        width:90%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap:40px;
+        }
+        figure{
+            height: 40px;
+            display:flex;
+            flex-direction:row;
+            gap:10px;
+        }
+        img{
+            height: 40px;
+        }
+        p{
+            width: 60%;
+        }
 }
 `

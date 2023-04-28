@@ -11,7 +11,7 @@ import { useOutClick } from "../Hooks/useOutClick";
 export function Header() {
   const location = useLocation()
   const [isOpen, setIsOpen] = useState(false);
-  const modalRef = useOutClick(() => setIsOpen(!isOpen))
+  const modalRef = useOutClick(() => setIsOpen(false))
 
   const slide = {
     mostrar: {
@@ -24,7 +24,9 @@ export function Header() {
       y: "-100%",
     },
   }
-
+  function handleCloseMenu() {
+    setIsOpen(false);
+  }
   return (
     <StylesHeader >
       <div className="container">
@@ -66,11 +68,11 @@ export function Header() {
                   className="bntMenu"
                 >
                   <img src={closeMenu} alt="" /></button>
-                <Link to="/" className={location.pathname == "/" ? "selected" : ""} >HOME</Link>
-                <Link to="/About" className={location.pathname == "/About" ? "selected" : ""}>SOBRE</Link>
-                <Link to="/Projects" className={location.pathname == "/Projects" ? "selected" : ""}>PROJETOS</Link>
-                <Link to="/Education" className={location.pathname == "/Education" ? "selected" : ""}>EDUCAÇÃO</Link>
-                <Link to="/Contact" className={location.pathname == "/Contact" ? "selected" : ""}>CONTATO</Link>
+                <Link to="/" className={location.pathname == "/" ? "selected" : ""} onClick={handleCloseMenu}>HOME</Link>
+                <Link to="/About" className={location.pathname == "/About" ? "selected" : ""} onClick={handleCloseMenu}>SOBRE</Link>
+                <Link to="/Projects" className={location.pathname == "/Projects" ? "selected" : ""} onClick={handleCloseMenu}>PROJETOS</Link>
+                <Link to="/Education" className={location.pathname == "/Education" ? "selected" : ""} onClick={handleCloseMenu}>EDUCAÇÃO</Link>
+                <Link to="/Contact" className={location.pathname == "/Contact" ? "selected" : ""} onClick={handleCloseMenu}>CONTATO</Link>
               </motion.nav>
             )}
           </AnimatePresence>

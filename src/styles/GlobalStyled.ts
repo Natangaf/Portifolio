@@ -19,7 +19,7 @@ export const GlobalStyled = createGlobalStyle`
 --Color-Information:#155BCB;
 }
 body{
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Jost', sans-serif;
   overflow-x: hidden;
   background-color: var(--Color-gray-100);
 }

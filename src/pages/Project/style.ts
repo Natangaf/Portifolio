@@ -1,7 +1,8 @@
 
 import styled from "styled-components";
+import { motion } from 'framer-motion';
 
-export const StylesProject = styled.main`
+export const StylesProject = styled(motion.main)`
     height: 100vh;
     width: 100vw;
     background-color: var(--Color-gray-100);
@@ -26,7 +27,7 @@ export const StylesProject = styled.main`
     }
     figure{
       border-radius: 5px;
-      background: rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
       width:60%;
       height: auto;
       height: 100%;
@@ -37,11 +38,15 @@ export const StylesProject = styled.main`
       overflow-x: auto;
       overflow-y: hidden;
       align-items: center;
+      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
     }
     figure>img{
+      position: relative;
+      top:-50px;
       transition: 0.5s ease-in;
       max-height: 280px;
-      
+      border-radius: 5px;
+      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
     }
     .apresentation{
       width: 100%;
@@ -53,11 +58,11 @@ export const StylesProject = styled.main`
       overflow: hidden;
     }
     div>img{
-      max-height: 80%;
+      max-height: 70%;
       width: 20%;
       background-color: red;
       border-radius: 5px;
-      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+      box-shadow: 0px 0px 10px -1px rgba(0,0,0,0.75);
     }
     .links{
       margin: 0 auto;

@@ -25,17 +25,20 @@ export const StylesHome = styled(motion.main)`
         .descripition{
             width:100% ;
             height: 40%;
-            display: flex;
-            justify-content: center;
+            display: flex;   
+            justify-content: space-between;
             align-items: center;
             align-content: center;
         }
-        .descripition > img{
-            animation: circle-in-hesitate 2s;
-            height: auto;
-            height: 99%;
-            border-radius: 50%;
-            border: 5px solid var(--colorSecond);
+        .natangaImage{
+            height: 250px;
+            width: 400px;
+            background-color:red;
+            border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
+        }
+        .natangaImage > img{
+            width: 100%;
+             //filter:drop-shadow(2px 0px 3px gray);
         }
         .person{
             width: 50%;
@@ -49,11 +52,6 @@ export const StylesHome = styled(motion.main)`
             font-size: 1.675rem;
             font-weight: 400;
         }
-            
-        .Heading1{
-            font-weight: 400;
-            font-size: 7rem;
-            }
         .primary{
             color: var(--colorPrimary);
         }
@@ -95,12 +93,18 @@ export const StylesHome = styled(motion.main)`
         width: 90%;
         height: auto;
     }
+    .descripition{
+        justify-content: center
+    }
+    .natangaImage{
+        height: 188px;
+        width: 270px;
+        background-color:red;
+        border-radius: 71% 29% 46% 54% / 84% 74% 26% 16% ;
+    }
+    .natangaImage > img{
+        width: 100%;
+    }
 }
-@media (max-width: 600px) {
-    .descripition > img{
-            /* height: 65%; */
-            /* width:51%; */
-            border-radius: 50%;
-        }
-}
+
 `

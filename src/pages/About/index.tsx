@@ -20,16 +20,16 @@ export function About() {
             <div className="container">
                 <div className="practicingValue">
                     <div className="practicingTime">
-                        <StyledTypography tag="p" classText="Heading1">1320</StyledTypography>
+                        <StyledTypography tag="p" classText="Number">1</StyledTypography>
                         <StyledTypography tag="p" classText="Heading3" className="color">.</StyledTypography>
                     </div>
                     <StyledTypography tag="p" classText="Body">
-                        Horas de pratica</StyledTypography>
+                        Ano de pratica</StyledTypography>
                 </div>
                 <div className="experience">
                     <div>
                         <StyledTypography tag="h2" classText="Heading2" className="experienceTitle">Experiencia</StyledTypography>
-                        <StyledTypography tag="p" classText="BodyColor" className="experienceDescripition"> Ja preatiquei mais de 1000 horas entre front-end e back-end para me tornar im programador Full Stack  </StyledTypography>
+                        <StyledTypography tag="p" classText="BodyColor" className="experienceDescripition"> Já pratiquei mais de 1000 horas entre Front-End e back-End para me tornar um programador Full Stack. </StyledTypography>
                     </div>
                     <Languages />
                 </div>

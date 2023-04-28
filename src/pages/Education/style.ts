@@ -8,11 +8,11 @@ export const StylesEducation = styled(motion.main)`
     background-color: var(--bgsecond);
     position: absolute; 
     .container{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    flex-direction: column;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
     }
     .title{
         width: 90%;
@@ -32,6 +32,10 @@ export const StylesEducation = styled(motion.main)`
     }
     
     @media (max-width: 1000px) {
+    .container{
+        width:90%;
+        justify-content: center
+    }
     .title{
         flex-direction: column;
         gap: 20px;
