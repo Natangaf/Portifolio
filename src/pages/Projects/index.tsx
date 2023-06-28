@@ -1,20 +1,24 @@
 
 import { StylesProjects } from "./style";
 import { useContext } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import { IProductProps } from "../../interface";
-import { AiOutlineArrowLeft, AiOutlineArrowRight } from 'react-icons/ai'
 import { ProjectContext } from "../../context/ProjectContext";
-import { CardProject } from '../../components/cardProject/index';
-import { ProjectsList } from "../../base/BaseProjects";
+import { useNavigate } from "react-router-dom";
+import Backend from "../../assets/img/projects/Backend.png"
+import Frontend from "../../assets/img/projects/Frontend.png"
+import { motion } from 'framer-motion';
+import { StyledTypography } from "../../components/baseTypography/style";
 
 export function Projects() {
+    const navigate = useNavigate()
     const { slide } = useContext(ProjectContext)
+
+    const item = {
+        hidden: { y: 20, opacity: 0 },
+        visible: {
+            y: 0,
+            opacity: 1
+        }
+    };
 
     return (
         <StylesProjects
@@ -26,43 +30,33 @@ export function Projects() {
                 duration: 1,
             }}
         >
-            <Swiper
-                effect={'coverflow'}
-                grabCursor={true}
-                centeredSlides={true}
-                loop={true}
-                slidesPerView={'auto'}
-                coverflowEffect={{
-                    rotate: 0,
-                    stretch: 0,
-                    depth: 100,
-                    modifier: 2.5,
-                }}
-                pagination={{ el: '.swiper-pagination', clickable: true }}
-                navigation={{
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    //clickable: true,
-                }}
-                modules={[EffectCoverflow, Pagination, Navigation]}
-                className="swiper_container"
-            >
-                {
-                    ProjectsList.map((project: IProductProps ,i) =>
-                        <SwiperSlide key={i} >
-                            <CardProject project={project} />
-                        </SwiperSlide>)
-                }
-                <div className="slider-controler">
-                    <div className="swiper-button-prev slider-arrow">
-                        <AiOutlineArrowLeft />
-                    </div>
-                    <div className="swiper-pagination"></div>
-                    <div className="swiper-button-next slider-arrow">
-                        <AiOutlineArrowRight />
-                    </div>
+            <section className="header">
+                <StyledTypography classText="Heading2" tag="h3">
+                    Que Projetos você que mais ver?
+                </StyledTypography>
+            </section>
+            <section className="codes">
+                <div>
+                    <button onClick={() => navigate('/ProjectsFront')}>
+                        <motion.img
+                            src={Frontend}
+                            variants={item}
+                            whileHover={{ scale: [null, 1.3, 1.2] }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </button>
                 </div>
-            </Swiper>
+                <div>
+                    <button onClick={() => navigate('/ProjectsBack')}>
+                        <motion.img
+                            src={Backend}
+                            variants={item}
+                            whileHover={{ scale: [null, 1.3, 1.2] }}
+                            transition={{ duration: 0.3 }}
+                        />
+                    </button>
+                </div>
+            </section>
         </StylesProjects>
     )
 }

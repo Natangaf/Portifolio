@@ -24,7 +24,7 @@ import lucioPage from "../../assets/img/projects/lucioTenda/lucioPage.png"
 
 
 
-export const ProjectsList = [{
+export const ProjectsListFront = [{
     id: 1,
     name: "NuKenzie",
     description: "Um sistema de gerenciamento de competências, com o qual o usuário pode agregar seus conhecimentos em qualquer tecnologia, podendo cadastrar, editar ou deletar.",

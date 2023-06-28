@@ -1,5 +1,4 @@
 import { UseFormRegisterReturn } from "react-hook-form/dist/types";
-import { Project } from './../pages/Project/index';
 
 export interface ISchool {
   id: number;
@@ -19,7 +18,13 @@ export interface IinputsContact {
   register: UseFormRegisterReturn;
 }
 
-
+export interface iImagesProject {
+  page: string,
+  img: string
+}
+export interface iProjectCard {
+  imagesProject: iImagesProject
+}
 export interface IProductProps {
   id: number;
   name: string;
@@ -31,18 +36,16 @@ export interface IProductProps {
   linkSite?: string
 }
 export type TProductprops = {
-  project: IProductprops;
+  project: IProductProps;
 }
-export interface iImagesProject {
-  page: string,
-  img: string
-}
-export interface iProjectCard {
-  imagesProject: iImagesProject
+
+export type TProductList = {
+  listProject: IProductProps[];
 }
 
 export interface ICardProjectProps {
   project: IProductProps;
+  listProject: IProductProps[];
 }
 export interface IPropsMaquinadeEscrever {
   text: string;
@@ -57,8 +60,9 @@ export interface iProjecProviderProps {
 export interface iProjecProviderValue {
   Idproject: number,
   setIdproject: React.Dispatch<React.SetStateAction<number>>,
-  BaseProjects: IProductProps[],
   slide: Variants,
+  listProject: IProductProps[],
+  setlistProject: React.Dispatch<React.SetStateAction<IProductProps[] >>
 }
 export interface iImgLanguages {
   language: string

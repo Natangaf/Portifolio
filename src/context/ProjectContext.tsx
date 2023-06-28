@@ -1,14 +1,14 @@
 import { createContext, useEffect, useState } from "react";
-import { iProjecProviderProps, iProjecProviderValue } from "../interface";
+import { IProductProps, iProjecProviderProps, iProjecProviderValue } from "../interface";
 import { useNavigate } from 'react-router-dom';
-import { ProjectsList } from "../base/BaseProjects";
+import { ProjectsListFront } from "../base/ProjectsListFront";
 
 export const ProjectContext = createContext({} as iProjecProviderValue)
 
 export const ProjectProvider = ({ children }: iProjecProviderProps) => {
     const [Idproject, setIdproject] = useState<number>(-1)
+    const [listProject, setlistProject] = useState<IProductProps[]>(ProjectsListFront)
     const navigate = useNavigate()
-    const BaseProjects = ProjectsList
 
 
     const slide = {
@@ -59,8 +59,9 @@ export const ProjectProvider = ({ children }: iProjecProviderProps) => {
             value={{
                 Idproject,
                 setIdproject,
-                BaseProjects,
                 slide,
+                listProject,
+                setlistProject
             }}>
             {children}
         </ProjectContext.Provider>
