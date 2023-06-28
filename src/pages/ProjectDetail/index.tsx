@@ -1,26 +1,26 @@
-import { StylesProject } from "./style";
+import { StylesProjectDetails } from "./style";
 import { useContext, useEffect } from 'react';
 import { ProjectContext } from "../../context/ProjectContext"
 import { useNavigate } from 'react-router-dom';
 import { useState } from 'react';
 import { IProductProps, iImagesProject } from "../../interface"
-import { ProjectsList } from "../../base/BaseProjects"
+import { ProjectsListFront } from "../../base/ProjectsListFront"
 import { delay, motion } from 'framer-motion';
-import { StyledTypography } from './../../components/baseTypography/style';
+import { StyledTypography } from '../../components/baseTypography/style';
 import { Link } from 'react-router-dom';
 import github from '../../assets/icons/github.svg'
 import word from '../../assets/icons/word.svg'
 import home from '../../assets/icons/home.svg'
 
-export function Project() {
+export function ProjectDetails() {
     const { slide } = useContext(ProjectContext)
-    const { Idproject } = useContext(ProjectContext)
+    const { Idproject, listProject } = useContext(ProjectContext)
     const [project, setProject] = useState({} as IProductProps)
     const [img, setImg] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
-        const project: IProductProps | undefined = ProjectsList.find((pro) => pro.id == Idproject)
+        const project: IProductProps | undefined = listProject.find((pro) => pro.id == Idproject)
         if (project) {
             setProject(project)
         } else {
@@ -49,7 +49,7 @@ export function Project() {
     };
 
     return (
-        <StylesProject
+        <StylesProjectDetails
             variants={slide}
             animate="mostrar"
             initial="inicial"
@@ -101,7 +101,7 @@ export function Project() {
             <Link to="/Projects" className="home">
                 <img src={home} alt="" />
             </Link>
-        </StylesProject >
+        </StylesProjectDetails >
     )
 
 }

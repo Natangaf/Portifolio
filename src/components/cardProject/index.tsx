@@ -8,12 +8,13 @@ import { ImgLanguages } from '../imgLanguages/imgLanguages';
 import { ICardProjectProps } from "../../interface";
 
 
-export function CardProject({ project }: ICardProjectProps) {
+export function CardProject({ project, listProject }: ICardProjectProps) {
     const navigate = useNavigate()
-    const { setIdproject } = useContext(ProjectContext)
+    const { setIdproject ,setlistProject } = useContext(ProjectContext)
 
     function pageProject(id: number) {
         setIdproject(id)
+        setlistProject(listProject)
         return navigate("/Project")
     }
 
