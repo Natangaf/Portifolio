@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import styled from "styled-components";
 
-export const StylesEducation = styled(motion.main)`
+export const StylesEducation = styled(motion.section)`
     padding-top: 80px;
     height: 100vh;
     width: 100%;

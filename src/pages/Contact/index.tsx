@@ -14,7 +14,6 @@ import { Loader } from "../../components/Loader";
 
 export function Contact() {
     const [send, setSend] = useState(false)
-    const { slide } = useContext(ProjectContext)
     const {
         register,
         handleSubmit,
@@ -48,13 +47,7 @@ export function Contact() {
 
     return (
         <StylesContact
-            variants={slide}
-            animate="mostrar"
-            initial="inicial"
-            exit="esconder"
-            transition={{
-                duration: 1,
-            }}
+
         >
             <div className="container">
                 <section>

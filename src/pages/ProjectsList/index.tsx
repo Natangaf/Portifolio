@@ -14,17 +14,10 @@ import { CardProject } from '../../components/cardProject/index';
 import { TProductList } from './../../interface/index';
 
 export function ProjectsList({ listProject }: TProductList) {
-    const { slide } = useContext(ProjectContext)
 
     return (
         <StylesProjectsList
-            variants={slide}
-            animate="mostrar"
-            initial="inicial"
-            exit="esconder"
-            transition={{
-                duration: 1,
-            }}
+
         >
             <Swiper
                 effect={'coverflow'}

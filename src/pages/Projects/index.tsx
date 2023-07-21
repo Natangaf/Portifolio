@@ -10,7 +10,6 @@ import { StyledTypography } from "../../components/baseTypography/style";
 
 export function Projects() {
     const navigate = useNavigate()
-    const { slide } = useContext(ProjectContext)
 
     const item = {
         hidden: { y: 20, opacity: 0 },
@@ -22,13 +21,7 @@ export function Projects() {
 
     return (
         <StylesProjects
-            variants={slide}
-            animate="mostrar"
-            initial="inicial"
-            exit="esconder"
-            transition={{
-                duration: 1,
-            }}
+
         >
             <section className="header">
                 <StyledTypography classText="Heading2" tag="h3">
