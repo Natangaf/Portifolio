@@ -4,7 +4,7 @@ import styled from "styled-components";
 
 export const StylesProjectsList = styled(motion.main)`
     width: 100vw;
-    height: 105vh;
+    height: 100vh;
     background-color: var(--bgcolor2);
     display: flex;
     align-items: center;

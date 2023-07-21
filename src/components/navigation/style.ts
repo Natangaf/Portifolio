@@ -15,25 +15,23 @@ export const StylesNav = styled.nav`
     justify-content: flex-end;
     gap: 30px;
   }
-
-  button{
+  button, a {
     cursor: pointer;
     font-family: 'Jost', sans-serif;
     text-decoration: none;
-    font-weight: 500px;
+    font-weight: 500;
     font-size: 17px;
     max-width: 150px;
     background-color: transparent;
     border: transparent;
-    color: var(--colorSecond); 
-    margin:0.5rem auto;
-  }
+    color: var(--colorSecond);
+    margin: 0.5rem auto;
 
-  button:hover {
+    &:hover {
       margin: 0.5rem auto;
       animation: neon 1s ease infinite;
+    }
   }
-
   .bntMenu {
     visibility: hidden;
     height: 100%;

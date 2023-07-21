@@ -5,14 +5,15 @@ import projects from "../../assets/img/background/projects.png"
 
 export const StylesProjects = styled(motion.section)`
     width: 100vw;
-    height: 105vh;
+    height: 100vh;
     background-color: var(--bgcolor2);
     background-image: url(${projects});
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap:80px;
+    gap:80px; 
+    position: absolute;
     .header{
         width: 80%;
         display: flex;

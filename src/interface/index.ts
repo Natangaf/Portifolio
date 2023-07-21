@@ -55,6 +55,10 @@ export interface IPropsMaquinadeEscrever {
   esconderCursor: boolean
 }
 
+interface Variants {
+  [key: string]: any
+}
+
 export interface iProjecProviderProps {
   children: React.ReactNode;
 }
@@ -64,14 +68,11 @@ export interface iProjecProviderValue {
   setIdproject: React.Dispatch<React.SetStateAction<number>>,
   listProject: IProductProps[],
   setlistProject: React.Dispatch<React.SetStateAction<IProductProps[]>>
+  slide: Variants,
 }
 export interface iImgLanguages {
   language: string
 }
-interface Variants {
-  [key: string]: any
-}
-
 export type FormValues = {
   name: string;
   email: string;

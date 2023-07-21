@@ -18,7 +18,7 @@ export const StylesAbout = styled(motion.section)`
     align-items: center;
 }
 .practicingValue{
-    height: 50%;
+    height: 60%;
     width:40%;
     text-align: right;
     border: 1px solid var(--Color-grey-50);
@@ -44,7 +44,7 @@ export const StylesAbout = styled(motion.section)`
 }
 .experience>div {
     height: 20%;
-    width: 70%;
+    width: 90%;
     text-align: right;
     display: flex;
     flex-direction: column;
@@ -83,6 +83,8 @@ export const StylesAbout = styled(motion.section)`
 .practicingTime{
     align-items: baseline
 }
-
+.experienceDescripition {
+    width: 100%;
+}
 }
 `

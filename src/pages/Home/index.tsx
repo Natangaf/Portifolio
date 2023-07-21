@@ -8,7 +8,6 @@ import { Contact } from '../Contact/index';
 import { StylesHome } from "./style"
 import { Header } from "../../components/header";
 
-
 export function Home() {
   const location = useLocation();
 

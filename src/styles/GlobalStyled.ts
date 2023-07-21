@@ -18,7 +18,11 @@ export const GlobalStyled = createGlobalStyle`
   --Color-Sucess:#168821;
 --Color-Information:#155BCB;
 }
+#root{
+  display: flex;
+}
 body{
+  
   font-family: 'Jost', sans-serif;
   overflow-x: hidden;
   background-color: var(--Color-gray-100);

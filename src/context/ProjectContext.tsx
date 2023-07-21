@@ -8,6 +8,18 @@ export const ProjectProvider = ({ children }: iProjecProviderProps) => {
     const [Idproject, setIdproject] = useState<number>(-1)
     const [listProject, setlistProject] = useState<IProductProps[]>(ProjectsListFront)
 
+    const slide = {
+        mostrar: {
+            y: 0,
+        },
+        esconder: {
+            y: "-100%",
+        },
+        inicial: {
+            y: "100%",
+        },
+    }
+
     return (
         <ProjectContext.Provider
             value={{
@@ -15,6 +27,7 @@ export const ProjectProvider = ({ children }: iProjecProviderProps) => {
                 setIdproject,
                 listProject,
                 setlistProject,
+                slide,
             }}>
             {children}
         </ProjectContext.Provider>

@@ -48,9 +48,7 @@ export function ProjectDetails() {
     };
 
     return (
-        <StylesProjectDetails
-
-        >
+        <StylesProjectDetails>
             <div className="containerDiv">
                 <div>
                     <StyledTypography tag="h2" classText="Heading3">

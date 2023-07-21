@@ -1,9 +1,9 @@
 import { StyledTypography } from "../baseTypography/style"
 import { StylesHeader } from "./style";
-import {Navigation} from "../navigation/index"
+import { Navigation } from "../navigation/index"
+
 
 export function Header() {
-
   return (
     <StylesHeader >
       <div className="container">
@@ -16,7 +16,7 @@ export function Header() {
               Fernades
             </StyledTypography>
           </div>
-          <Navigation/>
+          <Navigation />
         </div>
       </div>
     </StylesHeader>

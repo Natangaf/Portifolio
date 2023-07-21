@@ -1,7 +1,7 @@
-import { useState } from "react"
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import emailjs from "@emailjs/browser"
+import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import { StylesContact } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
@@ -12,7 +12,7 @@ import { FormValues } from "../../interface";
 import { Loader } from "../../components/Loader";
 
 export function Contact() {
-    const [send, setSend] = useState(false)
+    const [send, setSend] = useState(false);
     const {
         register,
         handleSubmit,
@@ -22,6 +22,7 @@ export function Contact() {
         mode: "onBlur",
         resolver: yupResolver(schemaContact)
     });
+
     const onSubmit = handleSubmit(async ({ name, email, message }:FormValues) => {
         setSend(!send)
         const tamplateParams = {
