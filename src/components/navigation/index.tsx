@@ -30,11 +30,9 @@ export function Navigation() {
 
     return (
         <StylesNav>
-            <FullpageNumber/>
             <div className="navigation">
                 <FullpageContext.Consumer>
                     {(ctx: Slide) => { 
-                    
                         return menuItems.map((item) => (
                             <button
                                 key={item.slideIndex}
