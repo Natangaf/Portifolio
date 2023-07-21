@@ -18,14 +18,15 @@ export const StylesAbout = styled(motion.section)`
     align-items: center;
 }
 .practicingValue{
-    height: 60%;
+    height: 70%;
     width:40%;
     text-align: right;
     border: 1px solid var(--Color-grey-50);
     border-right: none;
     display: flex;
-    flex-direction: column;
+    flex-direction:column-reverse;
     align-items: flex-end;
+    gap:20px;
 }
 .practicingTime{
     display: flex;
@@ -63,17 +64,17 @@ export const StylesAbout = styled(motion.section)`
     flex-wrap: nowrap
 }
 .practicingValue{
-    height: 30%;
+    height: 55%;
     width: 80%;
     text-align: right;
     border: 1px solid var(--Color-grey-50);
     border-right: none;
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+    flex-direction: column-reverse;
+    justify-content: space-evenly;
 }
 .experience {
-    height: 60%;
+    height: 40%;
     width: 80%;
     text-align: right;
     display: flex;
