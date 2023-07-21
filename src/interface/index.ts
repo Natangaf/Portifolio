@@ -1,4 +1,6 @@
 import { UseFormRegisterReturn } from "react-hook-form/dist/types";
+import * as yup from 'yup';
+import { schemaContact } from "../pages/Contact/schemaContact";
 
 export interface ISchool {
   id: number;
@@ -69,8 +71,9 @@ export interface iImgLanguages {
 interface Variants {
   [key: string]: any
 }
+
 export type FormValues = {
   name: string;
   email: string;
-  mensage: string;
+  message: string;
 };

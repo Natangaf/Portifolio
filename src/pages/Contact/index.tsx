@@ -1,4 +1,4 @@
-import { useContext, useState } from "react"
+import { useState } from "react"
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import emailjs from "@emailjs/browser"
@@ -7,7 +7,6 @@ import { StylesContact } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
 import { InputsContact } from "../../components/InputsContact";
 import { StyledButtons } from "../../styles/Buttons";
-import { ProjectContext } from "../../context/ProjectContext";
 import { schemaContact } from './schemaContact';
 import { FormValues } from "../../interface";
 import { Loader } from "../../components/Loader";
@@ -23,17 +22,16 @@ export function Contact() {
         mode: "onBlur",
         resolver: yupResolver(schemaContact)
     });
-
-    const onSubmit = handleSubmit(async ({ name, email, mensage }) => {
+    const onSubmit = handleSubmit(async ({ name, email, message }:FormValues) => {
         setSend(!send)
         const tamplateParams = {
             from_name: name,
-            message: mensage,
+            message: message,
             email
         }
 
         try {
-            const response = await emailjs.send("service_zfrc958", "template_rx5pyum", tamplateParams, "ptJ1nHgaX-ms2AHkj")
+            await emailjs.send("service_zfrc958", "template_rx5pyum", tamplateParams, "ptJ1nHgaX-ms2AHkj")
             toast.success("Já, já entro em contato")
             reset()
         } catch (error) {
@@ -77,10 +75,10 @@ export function Contact() {
                             </StyledTypography>
                             : <StyledTypography classText="BodyError" className="error" tag="p">
                             </StyledTypography>}
-                        <InputsContact name="Mensagem" label="Mensagem" register={register("mensage")} />
-                        {errors.mensage?.message ?
+                        <InputsContact name="Mensagem" label="Mensagem" register={register("message")} />
+                        {errors.message?.message ?
                             <StyledTypography classText="BodyError" className="error" tag="p">
-                                {errors.mensage.message}
+                                {errors.message?.message}
                             </StyledTypography>
                             : <StyledTypography classText="BodyError" className="error" tag="p">
                             </StyledTypography>}
