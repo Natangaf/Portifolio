@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import projects from "../../assets/img/background/projects.png"
 
-export const StylesProjects = styled(motion.main)`
+export const StylesProjects = styled(motion.section)`
     width: 100vw;
     height: 105vh;
     background-color: var(--bgcolor2);

@@ -9,7 +9,7 @@ export const StylesAside = styled(motion.aside)`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    position: absolute;
+    position: sticky;
     top: 0;
     z-index: 2;
     left: 20px;

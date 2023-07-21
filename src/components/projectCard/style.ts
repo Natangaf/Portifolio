@@ -6,7 +6,7 @@ interface PropTypeBg {
 
 export const StylesProjectCard = styled.div`
     background-color:red;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     background-position: center;
     background-size: cover;

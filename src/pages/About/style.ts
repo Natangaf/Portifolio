@@ -2,12 +2,13 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 
-export const StylesAbout = styled(motion.main)`
+export const StylesAbout = styled(motion.section)`
     background-color: var(--bgsecond);
     width: 100%;
-    height: 105vh;
+    height: 100%;
     display: flex;
     align-items: center;
+    position :relative;
 .container{
     height: 100%;
     display: flex;
@@ -53,6 +54,8 @@ export const StylesAbout = styled(motion.main)`
 .experienceDescripition {
     color: var(--Color-grey-50);
 }
+
+
 @media (max-width: 1000px) {
 .container{
     height: 90%;

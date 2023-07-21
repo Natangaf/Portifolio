@@ -13,7 +13,6 @@ import word from '../../assets/icons/word.svg'
 import home from '../../assets/icons/home.svg'
 
 export function ProjectDetails() {
-    const { slide } = useContext(ProjectContext)
     const { Idproject, listProject } = useContext(ProjectContext)
     const [project, setProject] = useState({} as IProductProps)
     const [img, setImg] = useState(0)
@@ -50,13 +49,7 @@ export function ProjectDetails() {
 
     return (
         <StylesProjectDetails
-            variants={slide}
-            animate="mostrar"
-            initial="inicial"
-            exit="esconder"
-            transition={{
-                duration: 1,
-            }}
+
         >
             <div className="containerDiv">
                 <div>

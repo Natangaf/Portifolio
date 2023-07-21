@@ -9,18 +9,9 @@ import { ProjectContext } from "../../context/ProjectContext";
 
 
 export function Education() {
-    const { slide } = useContext(ProjectContext)
 
     return (
-        <StylesEducation
-            variants={slide}
-            animate="mostrar"
-            initial="inicial"
-            exit="esconder"
-            transition={{
-                duration: 1,
-            }}
-        >
+        <StylesEducation>
             <div className="container">
                 <div className="title">
                     <StyledTypography classText="Heading1" tag="h4">

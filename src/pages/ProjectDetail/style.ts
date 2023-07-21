@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const StylesProjectDetails = styled(motion.main)`
-    height: 100vh;
+    height: 100%;
     width: 100vw;
     background-color: var(--Color-gray-100);
     display: flex;
