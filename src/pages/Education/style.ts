@@ -17,12 +17,6 @@ export const StylesEducation = styled(motion.section)`
     .title{
         width: 90%;
         display: flex;
-        
-    }
-    div{
-        height:30%;
-        width: 100%;
-        display: flex;
         flex-direction: row;
         align-items: flex-start;
         justify-content: space-between;
@@ -30,7 +24,17 @@ export const StylesEducation = styled(motion.section)`
     ul{
         width: 90%;
     }
-    
+    .cv{
+        text-decoration: none;
+        height: 40px;
+        width: 200px;
+        background-color: var(--colorPrimary);
+        color: var(--colorSecond);
+        font-size: 18px;
+        border: transparent;
+        justify-content: center;
+        align-items: center;
+    }
     @media (max-width: 1000px) {
     .container{
         width:90%;

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { motion } from 'framer-motion';
 
 export const StylesProjectDetails = styled(motion.main)`
-    height: 100%;
+    height: 100vh;
     width: 100vw;
     background-color: var(--Color-gray-100);
     display: flex;
@@ -13,40 +13,35 @@ export const StylesProjectDetails = styled(motion.main)`
     align-items: center;
     .containerDiv{
       width: 90%;
-      height: 500px;
+      height: 80%;
       display: flex;
       flex-direction: row;
       align-items: center;
       justify-content: space-around
     }
-    div{
-      width: 25%;
+   .infomation{
+      width: 30%;
       display: flex;
       flex-direction: column;
       gap: 30px;
     }
     figure{
+      padding: 20px;
+      width: 60%;
+      height: 70%;
       border-radius: 5px;
       background: rgba(255, 255, 255, 0.1);
-      width:60%;
-      height: auto;
-      height: 100%;
+      box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 24px -1px;
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      overflow-x: auto;
-      overflow-y: hidden;
+      flex-flow: row wrap;
+      -webkit-box-align: center;
       align-items: center;
-      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+      -webkit-box-pack: center;
+      justify-content: space-around;
     }
-    figure>img{
-      position: relative;
-      top:-50px;
-      transition: 0.5s ease-in;
-      max-height: 280px;
-      border-radius: 5px;
-      box-shadow: 0px 0px 24px -1px rgba(0,0,0,0.75);
+    .img{
+      height: 100%;
+      border-radius:3%;
     }
     .apresentation{
       width: 100%;
@@ -57,7 +52,7 @@ export const StylesProjectDetails = styled(motion.main)`
       flex-direction: row;
       overflow: hidden;
     }
-    div>img{
+   .infomation>img{
       max-height: 70%;
       width: 20%;
       background-color: red;
@@ -105,6 +100,92 @@ export const StylesProjectDetails = styled(motion.main)`
       bottom: 5%;
       right: 10%;
     }
+    .swiper_container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    .swiper-wrapper {
+      height: 10+0%;
+    }
+
+    .swiper-slide {
+      width:auto;
+      height: 80%;
+    }
+    .swiper-pagination .swiper-pagination-bullet {
+      filter: drop-shadow(0px 8px 24px rgba(18, 28, 53, 0.1));
+    }
+
+    .swiper-pagination .swiper-pagination-bullet-active {
+      background: var(--colorPrimary);
+    }
+    .swiper-slide-active{
+      border-radius:3%;
+      border: rgba(0,0,0,0.75) 1px;
+      -webkit-box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.75);
+    }
+    .slider-controler{
+        width: 50%;
+        height: 3.5rem;
+        margin: 0 auto;
+        position: absolute;
+        z-index:1;
+        bottom: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+    }
+
+.slider-arrow::after {
+  content: '';
+}
+.slider-arrow {
+  background: var(--colorSecond);
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+.swiper-pagination {
+  bottom: 1rem;
+  z-index: 1;
+}
+@media (max-width: 900px) {
+  .swiper_container {
+    height: 100%;
+    justify-content: center;
+  }
+  .swiper-wrapper {
+    height: 100%;
+  }
+  .swiper-slide {
+    width: 30rem;
+  }
+  .slider-controler{
+    width: 90%;
+    bottom: 4.6rem;
+  }
+
+}
+@media (max-width: 600px) {
+  .swiper_container {
+    height: 100%;
+    justify-content: center;
+  }
+  .swiper-wrapper {
+    height: 70%;
+  }
+  .slider-controler{
+    width: 90%;
+    bottom: 4.6rem;
+  }
+
+}
+
   @media (max-width:1000px) {
     .containerDiv{
       margin-top: 180px;
@@ -112,7 +193,7 @@ export const StylesProjectDetails = styled(motion.main)`
       flex-direction: column;
       align-items: center;
     }
-     div{
+    .infomation{
       width: 100%;
       height: 40%;
     }

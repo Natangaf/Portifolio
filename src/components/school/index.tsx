@@ -9,14 +9,14 @@ export function School({ element }: ISchoolelement) {
 
   return (
     <StylesSchool>
-      <div>
+      <div className="logo">
         <img src={img} alt={name} />
       </div>
-      <div>
+      <div className="schooDetails">
         <StyledTypography classText="Body" tag="p">{resume}</StyledTypography>
         <StyledTypography classText="BodyColor" tag="p">{year}</StyledTypography>
       </div>
-      <div>
+      <div className="schooDetails">
         <StyledTypography classText="BodyColor" tag="p">{descripition}</StyledTypography>
       </div>
     </StylesSchool>

@@ -43,8 +43,8 @@ export function ProjectsList({ listProject }: TProductList) {
                 >
                     {
                         listProject.map((project: IProductProps, i) =>
-                            <SwiperSlide key={i} >
-                                <CardProject project={project} listProject={listProject} />
+                            <SwiperSlide key={i}  >
+                                < CardProject project={project} listProject={listProject} />
                             </SwiperSlide>)
                     }
                     <div className="slider-controler">

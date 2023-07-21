@@ -22,7 +22,7 @@ export const GlobalStyled = createGlobalStyle`
   display: flex;
 }
 body{
-  
+
   font-family: 'Jost', sans-serif;
   overflow-x: hidden;
   background-color: var(--Color-gray-100);

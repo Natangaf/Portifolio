@@ -5,7 +5,8 @@ import { StyledButtons } from "../../styles/Buttons";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
 import { BaseEducation } from "../../base/BaseEducation";
-import { ProjectContext } from "../../context/ProjectContext";
+import { curriculo } from "../../base/Natã-Fernandes-full-stack.pdf";
+import { ProjectContext } from "../../context/ProjecBaseEducationtContext";
 
 
 export function Education() {
@@ -17,9 +18,9 @@ export function Education() {
                     <StyledTypography classText="Heading1" tag="h4">
                         Educação
                     </StyledTypography>
-                    <StyledButtons nameButtons="buttonsections">
+                    <a target="_blank" href={curriculo} className="cv">
                         Dowload Resume
-                    </StyledButtons>
+                    </a>
                 </div>
                 <ul>
                     {BaseEducation?.map((element: ISchool) =>
