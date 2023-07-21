@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Animation } from "./styles/Animation";
 import { GlobalStyled } from "./styles/GlobalStyled";
 import { ResetCSS } from "./styles/ResetCSS";

@@ -1,7 +1,5 @@
-import { useContext } from "react"
 import { StylesEducation } from "./style";
 import { StyledTypography } from "../../components/baseTypography/style";
-import { StyledButtons } from "../../styles/Buttons";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
 import { BaseEducation } from "../../base/BaseEducation";
