@@ -10,7 +10,6 @@ import { StyledTypography } from "../../components/baseTypography/style";
 
 export function Projects() {
     const navigate = useNavigate()
-    const { slide } = useContext(ProjectContext)
 
     const item = {
         hidden: { y: 20, opacity: 0 },
