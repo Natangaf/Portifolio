@@ -5,8 +5,7 @@ import { StyledButtons } from "../../styles/Buttons";
 import { ISchool } from "../../interface";
 import { School } from "../../components/school";
 import { BaseEducation } from "../../base/BaseEducation";
-import { curriculo } from "../../base/Natã-Fernandes-full-stack.pdf";
-import { ProjectContext } from "../../context/ProjecBaseEducationtContext";
+import curriculo from "../../base/Natã-Fernandes-full-stack.pdf";
 
 
 export function Education() {
