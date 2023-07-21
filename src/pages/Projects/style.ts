@@ -8,6 +8,9 @@ export const StylesProjects = styled(motion.section)`
     height: 100vh;
     background-color: var(--bgcolor2);
     background-image: url(${projects});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -44,11 +47,12 @@ export const StylesProjects = styled(motion.section)`
 @media (max-width: 600px) {
     gap:30px;
     .codes{
+        flex-direction: column;
         gap:0px;
     }
     img{
-        width: 120px;
-        height: 140px;
+        width: 60%;
+        height: auto;
     }
 }
 `

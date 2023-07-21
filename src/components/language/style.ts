@@ -35,13 +35,16 @@ export const StylesLanguage = styled(Language)`
     .bar{
         animation: wipe-in-right 1.5s ;
         ${({ value }: Ivalue) => {
-            return css`
+        return css`
             width: ${value}%;
             `
-        }}
+    }}
         height: 10px;
         background-color: var(--colorPrimary);
         border-radius: 3px;
+    }
+     @media (max-width: 600px) {
+        margin-top: 5px;
     }
 
 `

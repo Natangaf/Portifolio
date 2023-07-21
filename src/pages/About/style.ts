@@ -26,7 +26,6 @@ export const StylesAbout = styled(motion.section)`
     display: flex;
     flex-direction:column-reverse;
     align-items: flex-end;
-    gap:20px;
 }
 .practicingTime{
     display: flex;
@@ -59,6 +58,7 @@ export const StylesAbout = styled(motion.section)`
 
 @media (max-width: 1000px) {
 .container{
+    margin-top:60px;
     height: 90%;
     flex-direction: column;
     flex-wrap: nowrap
@@ -74,12 +74,13 @@ export const StylesAbout = styled(motion.section)`
     justify-content: space-evenly;
 }
 .experience {
-    height: 40%;
+    height: 45%;
     width: 80%;
     text-align: right;
     display: flex;
     flex-direction: column;
-    align-items: flex-end
+    align-items: flex-end;
+    gap:10px;
 }
 .practicingTime{
     align-items: baseline

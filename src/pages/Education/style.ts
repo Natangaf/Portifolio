@@ -32,13 +32,13 @@ export const StylesEducation = styled(motion.section)`
         color: var(--colorSecond);
         font-size: 18px;
         border: transparent;
+        display:flex;
         justify-content: center;
         align-items: center;
     }
     @media (max-width: 1000px) {
     .container{
         width:90%;
-        justify-content: center
     }
     .title{
         flex-direction: column;

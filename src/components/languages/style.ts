@@ -10,6 +10,6 @@ export const StylesLanguages = styled.ul`
     justify-content: space-around;
 
   @media (max-width:600px) {
-    justify-content: space-evenly
+    justify-content: flex-start; 
   } 
 `
