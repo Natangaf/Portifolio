@@ -7,7 +7,7 @@ Este é o meu portfólio que reflete minha jornada criativa e desenvolvimento t�
 ## Educação e Desenvolvimento Técnico
 
 - Cursei o programa Full Stack Developer na Kenzie Academy, onde adquiri conhecimentos em tecnologias front-end e back-end.
-- Minha formação incluiu experiências com HTML, CSS, JavaScript, React, Node.js,Laravel ,spring boot ,.net e Django.
+- Minha formação incluiu experiências com HTML, CSS, JavaScript, React, Node.js, Laravel , Spring boot ,.NET e Django.
 
 ## Projetos de Destaque
 
