@@ -10,7 +10,7 @@ export function Languages() {
       <StylesLanguage typelanguage="NODE.JS | NODE EXPRESS" value="100" />
       <StylesLanguage typelanguage="PYTHON | DJANGO" value="70" />
       <StylesLanguage typelanguage="PHP | LARAVEL " value="25" />
-      <StylesLanguage typelanguage="JAVA | SPRING BOOT" value="30" />
+      <StylesLanguage typelanguage="JAVA | SPRING BOOT" value="50" />
       <StylesLanguage typelanguage="C# | .NET" value="40" />
     </StylesLanguages>
   );

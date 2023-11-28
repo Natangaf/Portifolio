@@ -5,6 +5,7 @@ import user from "../../assets/img/projects/user/user.jpg"
 import PetKare from "../../assets/img/projects/PetKare/PetKare.jpg"
 import Filmes from "../../assets/img/projects/Filmes/Filmes.jpg"
 import SoundHub from "../../assets/img/projects/SoundHub/SoundHub.jpg"
+import bankconnect from "../../assets/img/projects/bankconnect/backgoud.png"
 
 export const ProjectsListBack = [
     {
@@ -123,7 +124,7 @@ export const ProjectsListBack = [
     {
         id: 9,
         name: "SoundHub",
-        description: "Apresentamos a API de Cadastro de Usuários, Álbuns e Músicas uma ferramenta poderosa desenvolvida com Django, que possibilita o gerenciamento completo de usuários, álbuns e músicas em um único lugar.O projeto foi construído utilizando as classes APIView e Serializer do Django Rest Framework(DRF), proporcionando uma experiência de desenvolvimento fluida e eficiente.Além disso, o banco de dados SQLite3 foi utilizado inicialmente, mas como parte da nossa busca contínua por aprimorar a performance, fizemos a transição para o PostgreSQL.",
+        description: "Apresentamos a API de Cadastro de Usuários, Álbuns e Músicas uma ferramenta desenvolvida com Django, que possibilita o gerenciamento completo de usuários, álbuns e músicas em um único lugar.O projeto foi construído utilizando as classes APIView e Serializer do Django Rest Framework(DRF), proporcionando uma experiência de desenvolvimento fluida e eficiente.Além disso, o banco de dados SQLite3 foi utilizado inicialmente, mas como parte da nossa busca contínua por aprimorar a performance, fizemos a transição para o PostgreSQL.",
         background: SoundHub,
         usedLanguages: ["Python", "Django", "Sqlite3", "Pytest", "Postgresql"],
         images: [
@@ -133,5 +134,19 @@ export const ProjectsListBack = [
             }
         ],
         linkRepo: "https://github.com/Natangaf/API-de-Cadastro-de-Usuarios-albuns-e-Musicas",
+    },
+    {
+        id: 10,
+        name: "bankconnect",
+        description: "BankConnect é um sistema de gerenciamento financeiro para empresas e clientes uma ferramenta desenvolvida com Java  & Spring Boot,. Ele permite que as empresas gerenciem seus saldos, transações e clientes. Os clientes podem usar o sistema para fazer depósitos e saques, bem como visualizar seus saldos e transações.",
+        background: bankconnect,
+        usedLanguages: ["Java", "Spring Boot","Postgresql"],
+        images: [
+            {
+                page: "Login",
+                img: bankconnect
+            }
+        ],
+        linkRepo: "https://github.com/Natangaf/bankconnect",
     },
 ]

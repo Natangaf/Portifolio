@@ -7,7 +7,7 @@ export function InputsContact({ name, label, register }: IinputsContact) {
   return (
     <StylesInputs>
       <label htmlFor={name}>{label}</label>
-      <input type="text" id={name} placeholder={name} {...register} />
+      <input type="text"  id={name} placeholder={name} {...register} />
     </StylesInputs>
   );
 }

@@ -26,6 +26,8 @@ export const StylesAbout = styled(motion.section)`
     display: flex;
     flex-direction:column-reverse;
     align-items: flex-end;
+    justify-content: space-evenly;
+    padding:5px;
 }
 .practicingTime{
     display: flex;
@@ -71,7 +73,7 @@ export const StylesAbout = styled(motion.section)`
     border-right: none;
     display: flex;
     flex-direction: column-reverse;
-    justify-content: space-evenly;
+
 }
 .experience {
     height: 45%;
