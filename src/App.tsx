@@ -23,6 +23,7 @@ function App() {
       setIsLoaded(false);
     };
   }, []);
+  console.log()
 
   return (
     <>
