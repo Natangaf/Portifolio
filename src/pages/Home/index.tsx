@@ -11,10 +11,8 @@ import { Education } from "../Education/index";
 import { Contact } from "../Contact/index";
 import { StylesHome } from "./style";
 import { Header } from "../../components/header";
-import dateFormat from "../../utils/formaters/dateFormat";
 
 export function Home() {
-  dateFormat();
   return (
     <StylesHome>
       <Fullpage>

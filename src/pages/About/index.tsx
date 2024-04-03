@@ -15,6 +15,7 @@ import { languages } from "../../base/Languages";
 import { frameworks } from "../../base/Frameworks";
 import { ImgLanguages } from "../../components/imgLanguages/imgLanguages";
 import { BaseTypography } from "../../components/baseTypography";
+import dateFormat from "../../utils/formaters/dateFormat";
 export function About() {
   const [alterTab, setAltertab] = useState<Boolean>(true);
 
@@ -85,6 +86,10 @@ export function About() {
                   const handleCardFlip = () => {
                     setFlipped(!flipped);
                   };
+                  const init = dateFormat(language.init);
+                  if (!init) {
+                    return null;
+                  }
                   return (
                     <CardExpertises
                       key={language.id}
@@ -122,7 +127,7 @@ export function About() {
                             Experiencia :
                           </StyledTypography>{" "}
                           <StyledTypography tag="p" classText="Descripition">
-                            {language.init} anos
+                            {init}
                           </StyledTypography>
                         </InfoLanguage>
                         <InfoLanguage>
@@ -141,64 +146,68 @@ export function About() {
                   );
                 })
               : frameworks.map((framework) => {
-                const [flipped, setFlipped] = useState(false);
-                const handleCardFlip = () => {
-                  setFlipped(!flipped);
-                };
-                return (
-                  <CardExpertises
-                    key={framework.id}
-                    onMouseEnter={handleCardFlip}
-                    onMouseLeave={handleCardFlip}
-                  >
-                    <FrontCard flipped={flipped}>
-                      <ImgLanguages language={framework.logo} />
-                      <StyledTypography
-                        tag="p"
-                        classText="Caption"
-                        className="experienceTitle"
-                      >
-                        {framework.name}
-                      </StyledTypography>
-                    </FrontCard>
-                    <BackCard flipped={flipped}>
-                      <ImgLanguages language={framework.logo} />
-                      <InfoLanguage>
+                  const [flipped, setFlipped] = useState(false);
+                  const handleCardFlip = () => {
+                    setFlipped(!flipped);
+                  };
+                  const init = dateFormat(framework.init);
+                  if (!init) {
+                    return null;
+                  }
+                  return (
+                    <CardExpertises
+                      key={framework.id}
+                      onMouseEnter={handleCardFlip}
+                      onMouseLeave={handleCardFlip}
+                    >
+                      <FrontCard flipped={flipped}>
+                        <ImgLanguages language={framework.logo} />
                         <StyledTypography
                           tag="p"
-                          classText="DescripitionSecundary"
+                          classText="Caption"
+                          className="experienceTitle"
                         >
-                          Linguagem :
-                        </StyledTypography>{" "}
-                        <StyledTypography tag="p" classText="Descripition">
                           {framework.name}
                         </StyledTypography>
-                      </InfoLanguage>
-                      <InfoLanguage>
-                        <StyledTypography
-                          tag="p"
-                          classText="DescripitionSecundary"
-                        >
-                          Experiencia :
-                        </StyledTypography>{" "}
-                        <StyledTypography tag="p" classText="Descripition">
-                          {framework.init} anos
-                        </StyledTypography>
-                      </InfoLanguage>
-                      <InfoLanguage>
-                        <StyledTypography
-                          tag="p"
-                          classText="DescripitionSecundary"
-                        >
-                          Projetos :
-                        </StyledTypography>{" "}
-                        <StyledTypography tag="p" classText="Descripition">
-                          {framework.projects}
-                        </StyledTypography>
-                      </InfoLanguage>
-                    </BackCard>
-                  </CardExpertises>
-                );
+                      </FrontCard>
+                      <BackCard flipped={flipped}>
+                        <ImgLanguages language={framework.logo} />
+                        <InfoLanguage>
+                          <StyledTypography
+                            tag="p"
+                            classText="DescripitionSecundary"
+                          >
+                            Linguagem :
+                          </StyledTypography>{" "}
+                          <StyledTypography tag="p" classText="Descripition">
+                            {framework.name}
+                          </StyledTypography>
+                        </InfoLanguage>
+                        <InfoLanguage>
+                          <StyledTypography
+                            tag="p"
+                            classText="DescripitionSecundary"
+                          >
+                            Experiencia :
+                          </StyledTypography>{" "}
+                          <StyledTypography tag="p" classText="Descripition">
+                            {init}
+                          </StyledTypography>
+                        </InfoLanguage>
+                        <InfoLanguage>
+                          <StyledTypography
+                            tag="p"
+                            classText="DescripitionSecundary"
+                          >
+                            Projetos :
+                          </StyledTypography>{" "}
+                          <StyledTypography tag="p" classText="Descripition">
+                            {framework.projects}
+                          </StyledTypography>
+                        </InfoLanguage>
+                      </BackCard>
+                    </CardExpertises>
+                  );
                 })}
           </ListExpertises>
         </Expertises>

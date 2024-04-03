@@ -1,26 +1,30 @@
-
-
-export const languages = [
+export const languages: {
+  id: number;
+  name: string;
+  init: string;
+  projects: number;
+  logo: string;
+}[] = [
   {
     id: 1,
     name: "HTML",
     init: "06/2022",
     projects: 4,
-    logo:"html5",
+    logo: "html5",
   },
   {
     id: 2,
     name: "CSS",
     init: "06/2022",
     projects: 8,
-    logo:"css",
+    logo: "css",
   },
   {
     id: 3,
     name: "JAVASCRIPT",
     init: "06/2022",
     projects: 13,
-    logo:"javascript",
+    logo: "javascript",
   },
   {
     id: 7,
@@ -41,6 +45,6 @@ export const languages = [
     name: "C#",
     init: "09/2023",
     projects: 1,
-    logo:"C#",
+    logo: "C#",
   },
 ];

@@ -30,14 +30,14 @@ export const frameworks = [
   {
     id: 5,
     name: "DJANGO",
-    init: "09/2024",
+    init: "09/3000",
     projects: 4,
     logo: "Django",
   },
   {
     id: 5,
     name: "Springboot",
-    init: "09/2024",
+    init: "09/3000",
     projects: 1,
     logo: "springboot",
   },

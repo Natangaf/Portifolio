@@ -2,10 +2,8 @@ import { StylesMe } from "./style";
 import { TypeAnimation } from "react-type-animation";
 import eu from "../../assets/img/perfil/eu.png";
 import { StyledTypography } from "../../components/baseTypography/style";
-import dateFormat from "../../utils/formaters/dateFormat";
 
 export function Me({ ref }: any) {
-  dateFormat();
 
   return (
     <StylesMe>

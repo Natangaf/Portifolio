@@ -136,9 +136,9 @@ export const FrontCard = styled.div<IflippedCard>`
   height: 100%;
 
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
+  justify-content: space-between;
   text-align: center;
   position: absolute;
 
