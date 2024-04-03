@@ -16,7 +16,7 @@ import github from '../../assets/icons/github.svg';
 import word from '../../assets/icons/word.svg';
 import { Header } from '../../components/header';
 
-function ProjectDetails() {
+export function ProjectDetails() {
     const { Idproject, listProject } = useContext(ProjectContext);
     const [project, setProject] = useState({} as IProductProps);
     const navigate = useNavigate();
@@ -103,4 +103,3 @@ function ProjectDetails() {
     );
 }
 
-export default ProjectDetails;

@@ -1,11 +1,29 @@
 import { BaseTypography } from ".";
 import styled, { css } from "styled-components";
 interface IStyledTypography {
-  classText: "Number" | "Title" | "Title1.2" | "Heading1" | "Heading1.2" | "Heading2" | "Heading3" | "Heading4" | "Heading" | "HeadingColorTwo" | "Body" | "BodyColor" | "BodyError" | "Caption" | "practicing"
+  classText:
+    | "Number"
+    | "Title"
+    | "Title1.2"
+    | "Heading1"
+    | "Heading1.2"
+    | "Heading2"
+    | "Heading3"
+    | "Heading4"
+    | "Heading"
+    | "HeadingColorTwo"
+    | "Body"
+    | "BodyColor"
+    | "BodyError"
+    | "Caption"
+    | "practicing"
+    | "Descripition"
+    | "DescripitionSecundary"
+    | "DescripitionColor";
 }
 
 export const StyledTypography = styled(BaseTypography)`
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   color: var(--colorSecond);
   margin: 0;
 
@@ -86,7 +104,7 @@ export const StyledTypography = styled(BaseTypography)`
         return css`
           color: var(--Color-grey-50);
           font-weight: 200;
-          font-size: 1rem;
+          font-size: 0.8rem;
           line-height: 1.25rem;
           @media (max-width: 600px) {
             font-size: 0.8rem;
@@ -98,6 +116,36 @@ export const StyledTypography = styled(BaseTypography)`
           font-weight: 400;
           font-size: 0.875rem;
           line-height: 1.25rem;
+        `;
+      case "Descripition":
+        return css`
+          color: var(--colorSecond);
+          font-weight: 200;
+          font-size: 0.8rem;
+          line-height: 1.25rem;
+          @media (max-width: 600px) {
+            font-size: 0.8rem;
+          }
+        `;
+      case "DescripitionSecundary":
+        return css`
+          color: var(--Color-grey-50);
+          font-weight: 200;
+          font-size: 0.8rem;
+          line-height: 1.25rem;
+          @media (max-width: 600px) {
+            font-size: 0.8rem;
+          }
+        `;
+      case "DescripitionColor":
+        return css`
+          color: var(--colorPrimary);
+          font-weight: 200;
+          font-size: 0.8rem;
+          line-height: 1.25rem;
+          @media (max-width: 600px) {
+            font-size: 0.8rem;
+          }
         `;
       default:
         return css``;

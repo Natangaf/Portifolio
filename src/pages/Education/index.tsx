@@ -5,14 +5,15 @@ import { School } from "../../components/school";
 import { BaseEducation } from "../../base/BaseEducation";
 import curriculo from "../../base/Natã-Fernandes-full-stack.pdf";
 
-
 export function Education() {
+
+
 
     return (
         <StylesEducation>
             <div className="container">
                 <div className="title">
-                    <StyledTypography classText="Heading1" tag="h4">
+                    <StyledTypography classText="Heading2" tag="h4">
                         Educação
                     </StyledTypography>
                     <a target="_blank" href={curriculo} className="cv">

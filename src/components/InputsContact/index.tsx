@@ -1,13 +1,16 @@
-import React from "react"
+import React, { InputHTMLAttributes } from "react";
 import { StylesInputs } from "./style";
-import { IinputsContact } from "../../interface";
 
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
+  titleInput: string;
+  label: string;
+}
 
-export function InputsContact({ name, label, register }: IinputsContact) {
+export function InputsContact({ name, label, ...rest }: Props) {
   return (
     <StylesInputs>
       <label htmlFor={name}>{label}</label>
-      <input type="text" id={name} placeholder={name} {...register} />
+      <input type="text" id={name} placeholder={name} {...rest} />
     </StylesInputs>
   );
 }

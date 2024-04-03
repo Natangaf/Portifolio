@@ -1,22 +1,28 @@
-import Fullpage, { FullPageSections, FullpageSection, FullpageNavigation} from '@ap.cx/react-fullpage';
-import { useLocation } from "react-router-dom";
-import { Me } from '../Me/index';
-import { About } from '../About/index';
-import { Projects } from '../Projects/index';
-import { Education } from '../Education/index';
-import { Contact } from '../Contact/index';
-import { StylesHome } from "./style"
+import Fullpage, {
+  FullPageSections,
+  FullpageSection,
+  FullpageNavigation,
+} from "@ap.cx/react-fullpage";
+
+import { Me } from "../Me/index";
+import { About } from "../About/index";
+import { Projects } from "../Projects/index";
+import { Education } from "../Education/index";
+import { Contact } from "../Contact/index";
+import { StylesHome } from "./style";
 import { Header } from "../../components/header";
+import dateFormat from "../../utils/formaters/dateFormat";
 
 export function Home() {
-  const location = useLocation();
-
+  dateFormat();
   return (
     <StylesHome>
       <Fullpage>
-        <FullpageNavigation itemStyle={{
-          backgroundColor: "#1f4e70"
-        }} />
+        <FullpageNavigation
+          itemStyle={{
+            backgroundColor: "#1f4e70",
+          }}
+        />
         <Header />
         <FullPageSections>
           <FullpageSection>

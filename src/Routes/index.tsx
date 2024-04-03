@@ -1,22 +1,24 @@
-
 import { Navigate, Route, Routes } from "react-router-dom";
-import { ProjectsList } from '../pages/ProjectsList/index';
+import { ProjectsList } from "../pages/ProjectsList/index";
 import { ProjectsListFront } from "../base/ProjectsListFront/index";
-import { ProjectsListBack } from '../base/ProjectsListBack/index';
-import ProjectDetails from "../pages/ProjectDetail/index"
-import { Home } from '../pages/Home/index';
-
+import { ProjectsListBack } from "../base/ProjectsListBack/index";
+import { Home } from "../pages/Home/index";
+import { ProjectDetails } from "../pages/ProjectDetail";
 
 export function RoutePages() {
-
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/ProjectsFront" element={<ProjectsList listProject={ProjectsListFront} />} />
-      <Route path="/ProjectsBack" element={<ProjectsList listProject={ProjectsListBack} />} />
+      <Route
+        path="/ProjectsFront"
+        element={<ProjectsList listProject={ProjectsListFront} />}
+      />
+      <Route
+        path="/ProjectsBack"
+        element={<ProjectsList listProject={ProjectsListBack} />}
+      />
       <Route path="/Project" element={<ProjectDetails />} />
       <Route path="*" element={<Navigate to="/" />} />
     </Routes>
-  )
+  );
 }
-

@@ -3,10 +3,9 @@ import styled from "styled-components";
 
 export const StylesEducation = styled(motion.section)`
     padding-top: 80px;
-    height: 100vh;
+    height: 90vh;
     width: 100%;
     background-color: var(--bgsecond);
-    position: absolute; 
     .container{
         height: 100%;
         display: flex;
