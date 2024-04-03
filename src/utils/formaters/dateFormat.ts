@@ -20,11 +20,17 @@ export default (startDate: string) => {
     result += `${yearsDifference} ano`;
   }
 
-  if (monthsDifference > 1) {
-    result += ` e ${monthsDifference} meses`;
-  } else if (monthsDifference === 1) {
-    result += ` e ${monthsDifference} mês`;
+  if(result[0]){
+    result += ` e`;
+
+   
   }
 
-  return result
+  if (monthsDifference > 1) {
+    result += ` ${monthsDifference} meses`;
+  } else if (monthsDifference === 1) {
+    result += ` ${monthsDifference} mês`;
+  }
+
+  return result;
 };

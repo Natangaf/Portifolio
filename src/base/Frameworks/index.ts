@@ -23,7 +23,7 @@ export const frameworks = [
   {
     id: 4,
     name: "NEXT",
-    init: "09/2024",
+    init: "09/2023",
     projects: 2,
     logo: "next.js",
   },

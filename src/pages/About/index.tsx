@@ -23,6 +23,10 @@ export function About() {
     setAltertab(!alterTab);
   };
 
+  const date = dateFormat("06/2022").split(" ");
+
+  const timeExperience = Number(date[3]) > 6 ? Number(date[0]) + 1 : date[0];
+
   return (
     <StylesAbout>
       <div className="container">
@@ -52,7 +56,7 @@ export function About() {
           </div>
           <div className="practicingTime">
             <StyledTypography tag="p" classText="Number">
-              2
+              {timeExperience}
             </StyledTypography>
             <StyledTypography tag="p" classText="Number" className="color">
               .
