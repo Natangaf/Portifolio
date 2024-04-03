@@ -51,7 +51,7 @@ export const StylesProjects = styled(motion.section)`
         gap:0px;
     }
     img{
-        width: 60%;
+        width: 40%;
         height: auto;
     }
 }

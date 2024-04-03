@@ -3,11 +3,14 @@ import { StyledTypography } from "../../components/baseTypography/style";
 import {
   BackCard,
   CardExpertises,
+  Container,
   Expertises,
   FrontCard,
   HeaderExpertises,
   InfoLanguage,
   ListExpertises,
+  PracticingTime,
+  PracticingValue,
   StylesAbout,
 } from "./style";
 import { StyledButtons } from "../../styles/Buttons";
@@ -29,8 +32,8 @@ export function About() {
 
   return (
     <StylesAbout>
-      <div className="container">
-        <div className="practicingValue">
+      <Container>
+        <PracticingValue >
           <div>
             <StyledTypography
               tag="h2"
@@ -54,18 +57,18 @@ export function About() {
               de sistemas completos e eficientes.{" "}
             </StyledTypography>
           </div>
-          <div className="practicingTime">
+          <PracticingTime>
             <StyledTypography tag="p" classText="Number">
               {timeExperience}
             </StyledTypography>
             <StyledTypography tag="p" classText="Number" className="color">
               .
             </StyledTypography>
-          </div>
+          </PracticingTime>
           <StyledTypography tag="p" classText="Body">
             Anos de pratica
           </StyledTypography>
-        </div>
+        </PracticingValue>
         <Expertises>
           <HeaderExpertises>
             <StyledButtons
@@ -215,7 +218,7 @@ export function About() {
                 })}
           </ListExpertises>
         </Expertises>
-      </div>
+      </Container>
     </StylesAbout>
   );
 }

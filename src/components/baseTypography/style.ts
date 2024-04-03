@@ -61,7 +61,7 @@ export const StyledTypography = styled(BaseTypography)`
           font-size: 7rem;
 
           @media (max-width: 600px) {
-            font-size: 4rem;
+            font-size: 3rem;
           }
         `;
       case "Heading2":

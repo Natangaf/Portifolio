@@ -1,69 +1,94 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const StylesAbout = styled(motion.section)`
+export const StylesAbout = styled(motion.section).attrs({
+  "data-com": "StylesAbout",
+})`
   background-color: var(--bgsecond);
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
   position: relative;
-  .container {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+  @media (max-width: 700px) {
+    overflow-y: auto;
+    height: 100vh;
   }
-  .practicingValue {
-    height: 70%;
-    width: 40%;
+`;
+
+export const Container = styled.section.attrs({ "data-com": "Container" })`
+  height: 89vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 70px;
+
+  @media (max-width: 1000px) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  @media (max-width: 700px) {
+    height: 100vh;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-top: 200px;
+  }
+`;
+
+export const PracticingValue = styled.div.attrs({
+  "data-com": "PracticingValue",
+})`
+  height: 70%;
+  width: 40%;
+  text-align: right;
+  border: 1px solid var(--Color-grey-50);
+  border-right: none;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+  padding: 10px 20px 10px 0px;
+
+  @media (max-width: 1000px) {
+    height: 55%;
+    width: 80%;
     text-align: right;
     border: 1px solid var(--Color-grey-50);
     border-right: none;
     display: flex;
     flex-direction: column-reverse;
-    align-items: flex-end;
-    padding: 10px 20px 10px 0px;
+    justify-content: space-evenly;
+    padding: 0px;
   }
-  .practicingTime {
-    display: flex;
-    height: auto;
+
+  @media (max-width: 700px) {
+    height: 60%;
+    width: 90%;
+    padding: 0px;
   }
+`;
+
+export const PracticingTime = styled.div.attrs({
+  "data-com": "PracticingTime",
+})`
+  display: flex;
+  height: auto;
+
   .color {
     color: var(--colorPrimary);
   }
 
-  .experienceDescripition {
-    padding-left: 10px;
-    color: var(--Color-grey-50);
-  }
-
   @media (max-width: 1000px) {
-    .container {
-      margin-top: 60px;
-      height: 90%;
-      flex-direction: column;
-      flex-wrap: nowrap;
-    }
-    .practicingValue {
-      height: 55%;
-      width: 80%;
-      text-align: right;
-      border: 1px solid var(--Color-grey-50);
-      border-right: none;
-      display: flex;
-      flex-direction: column-reverse;
-      justify-content: space-evenly;
-    }
-    .practicingTime {
-      align-items: baseline;
-    }
-    .experienceDescripition {
-      width: 100%;
-    }
+    align-items: baseline;
   }
+  
+`;
+
+export const ExperienceDescription = styled.p.attrs({
+  "data-com": "ExperienceDescription",
+})`
+  padding-left: 10px;
+  color: var(--Color-grey-50);
 `;
 
 export const Expertises = styled.div.attrs({ "data-com": "Expertises" })`
@@ -77,13 +102,11 @@ export const Expertises = styled.div.attrs({ "data-com": "Expertises" })`
   gap: 30px;
 
   @media (max-width: 1000px) {
-    height: 45%;
     width: 80%;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
+    padding-bottom: 30px;
+  }
+  @media (max-width: 400px) {
+    width: 90%;
   }
 `;
 export const HeaderExpertises = styled.div.attrs({
@@ -96,6 +119,9 @@ export const HeaderExpertises = styled.div.attrs({
   align-items: center;
   gap: 20px;
   justify-content: flex-end;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 `;
 export const ListExpertises = styled.ul.attrs({
   "data-com": "ListExpertises",

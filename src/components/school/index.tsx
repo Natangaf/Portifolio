@@ -1,5 +1,10 @@
 import React from "react";
-import { LogoSchool, StylesSchool } from "./style";
+import {
+  CourseDescripition,
+  CourseDetails,
+  LogoSchool,
+  StylesSchool,
+} from "./style";
 import { StyledTypography } from "../baseTypography/style";
 import { ISchoolelement } from "../../interface";
 
@@ -8,23 +13,22 @@ export function School({ element }: ISchoolelement) {
 
   return (
     <StylesSchool>
-      <LogoSchool >
+      <LogoSchool>
         <img src={img} alt={name} />
       </LogoSchool>
-      <div className="schooDetails">
+      <CourseDetails>
         <StyledTypography classText="Body" tag="p">
           {resume}
         </StyledTypography>
         <StyledTypography classText="BodyColor" tag="p">
           {year}
         </StyledTypography>
-      </div>
-      <div className="schooDetails">
-        <p></p>
+      </CourseDetails>
+      <CourseDescripition>
         <StyledTypography classText="BodyColor" tag="p">
           {descripition}
         </StyledTypography>
-      </div>
+      </CourseDescripition>
     </StylesSchool>
   );
 }
