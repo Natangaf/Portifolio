@@ -16,7 +16,7 @@ export function Education() {
                     <StyledTypography classText="Heading2" tag="h4">
                         Educação
                     </StyledTypography>
-                    <a target="_blank" href={curriculo} className="cv">
+                    <a target="_blank" href="/curriculum" className="cv">
                         Dowload Resume
                     </a>
                 </div>

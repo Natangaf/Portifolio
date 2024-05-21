@@ -4,6 +4,7 @@ import { ProjectsListFront } from "../base/ProjectsListFront/index";
 import { ProjectsListBack } from "../base/ProjectsListBack/index";
 import { Home } from "../pages/Home/index";
 import { ProjectDetails } from "../pages/ProjectDetail";
+import Curriculum from "../pages/Curriculum";
 
 export function RoutePages() {
   return (
@@ -16,6 +17,10 @@ export function RoutePages() {
       <Route
         path="/ProjectsBack"
         element={<ProjectsList listProject={ProjectsListBack} />}
+      />
+      <Route
+        path="/Curriculum"
+        element={<Curriculum />}
       />
       <Route path="/Project" element={<ProjectDetails />} />
       <Route path="*" element={<Navigate to="/" />} />
