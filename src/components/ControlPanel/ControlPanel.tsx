@@ -1,8 +1,8 @@
-import React, { FC, ChangeEvent } from "react";
-import styled from "styled-components";
+import  { useState, useEffect,} from "react";
 import PDFPrinter from "./PDFPrinter";
 import {
   ControlPanelContainer,
+  ControlPdf,
   ControlSection,
   Icon,
   PageInput,
@@ -55,6 +55,27 @@ const ControlPanel = (props) => {
     if (!isMaxZoom) setScale(scale + 0.1);
   };
 
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth < 600) {
+      const newScale = windowWidth / 600;
+      setScale(newScale < 0.6 ? 0.6 : newScale);
+    }
+  }, [windowWidth, setScale]);
+
   return (
     <ControlPanelContainer>
       <ControlSection>
@@ -85,9 +106,9 @@ const ControlPanel = (props) => {
           <Icon src={dowload} />
         </a>
       </ControlSection>
-      <ControlSection>
+      <ControlPdf data-com='dev'>
         <PDFPrinter file={file} />
-      </ControlSection>
+      </ControlPdf>
     </ControlPanelContainer>
   );
 };

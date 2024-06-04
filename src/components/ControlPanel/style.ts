@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import styled from "styled-components";
 
 export const ControlPanelContainer = styled.div`
@@ -7,21 +6,29 @@ export const ControlPanelContainer = styled.div`
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-
   width: 55%;
   background-color: var(--Color-grey-20);
-
   border-radius: 12px;
+  
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    width: 90%;
+  }
 `;
 
 export const ControlSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+  
+  @media (max-width: 400px) {
+    margin-top: 5px;
+  }
 `;
 
 export const Icon = styled.img`
-  margin: 0 0.75rem;
   cursor: pointer;
 
   &.disabled {
@@ -45,3 +52,8 @@ export const PageInput = styled.input`
 export const ZoomLabel = styled.span`
   margin: 0 0.75rem;
 `;
+
+export const ControlPdf = styled.div`
+  max-width: 70%;
+`;
+
