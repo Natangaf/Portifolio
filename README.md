@@ -38,3 +38,6 @@ Estou empenhado em aprendizado contínuo e ansioso para enfrentar novos desafios
 Agradeço por explorar meu portfólio e ficarei feliz em discutir oportunidades ou colaborações. [Entre em contato comigo](insira_seu_link_de_contato_aqui) para mais informações.
 
 *Vamos juntos criar soluções extraordinárias!*
+
+
+*para testes*
