@@ -1,5 +1,6 @@
 import kenzielogo from "../../assets/icons/kenzielogo.png";
 import udemylogo from "../../assets/icons/udemylogo.svg";
+import ada from "../../assets/icons/ada.png";
 
 export const BaseEducation = [
   {
@@ -19,5 +20,14 @@ export const BaseEducation = [
     resume: "Programação Orientada a Objetos com C#",
     descripition:
       "Curso de Programação Orientada a Objetos com C# abrangendo conceitos fundamentais e avançados. Com foco prático, o curso proporciona conhecimento em interfaces, polimorfismo, princípios SOLID, padrões de projeto, generics, expressões lambda, delegates, LINQ e muito mais.",
+  },
+  {
+    id: 2,
+    img: ada,
+    name: "Ada",
+    year: "2024 - 2024",
+    resume: "DevOps",
+    descripition:
+      "A trilha de DevOps da Ada para o Santander Coders cobre Git, redes, gestão de código, Linux, nuvem, Terraform, AWS, Docker e exercícios práticos para consolidar aprendizado. Ideal para desenvolver habilidades essenciais em infraestrutura e implementação de ambientes digitais.",
   },
 ];

@@ -22,6 +22,8 @@ export const StylesEducation = styled(motion.section)`
   }
   ul {
     width: 90%;
+    height: 40%;
+    overflow-y: auto;
   }
   .cv {
     text-decoration: none;
