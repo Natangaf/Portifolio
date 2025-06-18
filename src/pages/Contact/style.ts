@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import styled from "styled-components";
 import contact from "../../assets/img/background/contact.jpg"
 
+
 export const StylesContact = styled(motion.section)`
     padding-top: 80px;
     height: 100%;
