@@ -14,9 +14,11 @@ const PDFPrinter = ({ file }) => {
     document.body.appendChild(pdfFrame);
 
     pdfFrame.onload = () => {
-      pdfFrame.contentWindow.focus();
-      pdfFrame.contentWindow.print();
-      document.body.removeChild(pdfFrame); 
+      if (pdfFrame.contentWindow) {
+        pdfFrame.contentWindow.focus();
+        pdfFrame.contentWindow.print();
+      }
+      document.body.removeChild(pdfFrame);
     };
   };
 
