@@ -1,54 +1,88 @@
-
+import { useState } from "react";
 import { StylesProjects } from "./style";
-import { useContext } from 'react';
-import { ProjectContext } from "../../context/ProjectContext";
 import { useNavigate } from "react-router-dom";
-import Backend from "../../assets/img/projects/Backend.png"
-import Frontend from "../../assets/img/projects/Frontend.png"
-import { motion } from 'framer-motion';
-import { StyledTypography } from "../../components/baseTypography/style";
+import { ProjectsListFront } from "../../base/ProjectsListFront";
+import { ProjectsListBack } from "../../base/ProjectsListBack";
 
 export function Projects() {
-    const navigate = useNavigate()
+  const [tab, setTab] = useState<"front" | "back">("front");
+  const navigate = useNavigate();
 
-    const item = {
-        hidden: { y: 20, opacity: 0 },
-        visible: {
-            y: 0,
-            opacity: 1
-        }
-    };
+  const list = tab === "front" ? ProjectsListFront : ProjectsListBack;
 
-    return (
-        <StylesProjects
-        >
-            <section className="header">
-                <StyledTypography classText="Heading2" tag="h3">
-                    Que Projetos você que mais ver?
-                </StyledTypography>
-            </section>
-            <section className="codes">
-                <div>
-                    <button onClick={() => navigate('/ProjectsFront')}>
-                        <motion.img
-                            src={Frontend}
-                            variants={item}
-                            whileHover={{ scale: [null, 1.3, 1.2] }}
-                            transition={{ duration: 0.3 }}
-                        />
-                    </button>
+  return (
+    <StylesProjects>
+      <div className="proj-container">
+        <div className="proj-header">
+          <p className="proj-label">Portfólio</p>
+          <h2 className="proj-title">Projetos</h2>
+          <p className="proj-sub">Uma seleção de projetos front-end e back-end.</p>
+        </div>
+
+        <div className="proj-tabs">
+          <button
+            className={`proj-tab${tab === "front" ? " active" : ""}`}
+            onClick={() => setTab("front")}
+          >
+            Front-end
+          </button>
+          <button
+            className={`proj-tab${tab === "back" ? " active" : ""}`}
+            onClick={() => setTab("back")}
+          >
+            Back-end
+          </button>
+        </div>
+
+        <div className="proj-grid">
+          {list.map((project) => (
+            <div
+              className="proj-card"
+              key={project.id + project.name}
+              onClick={() => navigate(`/ProjectsFront`, { state: { project } })}
+            >
+              <img
+                className="proj-card-img"
+                src={project.background}
+                alt={project.name}
+              />
+              <div className="proj-card-body">
+                <div className="proj-card-name">{project.name}</div>
+                <p className="proj-card-desc">{project.description}</p>
+                <div className="proj-card-chips">
+                  {project.usedLanguages?.map((lang: string) => (
+                    <span className="proj-card-chip" key={lang}>{lang}</span>
+                  ))}
                 </div>
-                <div>
-                    <button onClick={() => navigate('/ProjectsBack')}>
-                        <motion.img
-                            src={Backend}
-                            variants={item}
-                            whileHover={{ scale: [null, 1.3, 1.2] }}
-                            transition={{ duration: 0.3 }}
-                        />
-                    </button>
+                <div className="proj-card-links">
+                  {project.linkRepo && (
+                    <a
+                      className="proj-card-link"
+                      href={project.linkRepo}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      GitHub →
+                    </a>
+                  )}
+                  {project.linkSite && (
+                    <a
+                      className="proj-card-link"
+                      href={project.linkSite}
+                      target="_blank"
+                      rel="noreferrer"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      Demo →
+                    </a>
+                  )}
                 </div>
-            </section>
-        </StylesProjects>
-    )
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </StylesProjects>
+  );
 }

@@ -1,20 +1,14 @@
-import { StyledTypography } from "../baseTypography/style"
 import { StylesHeader } from "./style";
 import { Navigation } from "../navigation/index"
 
-
 export function Header() {
   return (
-    <StylesHeader >
+    <StylesHeader>
       <div className="container">
         <div className="head">
           <div className="name">
-            <StyledTypography tag="h1" classText="Title">
-              Natã
-            </StyledTypography>
-            <StyledTypography tag="h2" classText="Title1.2">
-              Fernades
-            </StyledTypography>
+            <h1>natanga<span>.</span></h1>
+            <h2>Natã Fernandes</h2>
           </div>
           <Navigation />
         </div>

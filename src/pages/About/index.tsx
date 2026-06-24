@@ -1,223 +1,82 @@
 import { useState } from "react";
-import { StyledTypography } from "../../components/baseTypography/style";
 import {
-  BackCard,
-  CardExpertises,
-  Container,
-  Expertises,
-  FrontCard,
-  HeaderExpertises,
-  InfoLanguage,
-  ListExpertises,
-  PracticingTime,
-  PracticingValue,
-  StylesAbout,
+  StylesAbout, Container, SectionLabel, SectionTitle,
+  AboutGrid, BioText, SkillsGrid, SkillChip, SkillName, SkillLevel,
 } from "./style";
-import { StyledButtons } from "../../styles/Buttons";
-import { languages } from "../../base/Languages";
-import { frameworks } from "../../base/Frameworks";
 import { ImgLanguages } from "../../components/imgLanguages/imgLanguages";
-import { BaseTypography } from "../../components/baseTypography";
-import dateFormat from "../../utils/formaters/dateFormat";
+import { languages } from "../../base/Languages";
+import { frameworks, infra } from "../../base/Frameworks";
+
+type Tab = "lang" | "fw" | "infra";
+
+const tabs: { key: Tab; label: string }[] = [
+  { key: "lang",  label: "Linguagens"  },
+  { key: "fw",    label: "Frameworks"  },
+  { key: "infra", label: "Infra"       },
+];
+
 export function About() {
-  const [alterTab, setAltertab] = useState<Boolean>(true);
-
-  const selectTab = () => {
-    setAltertab(!alterTab);
-  };
-
-  const date = dateFormat("06/2022").split(" ");
-
-  const timeExperience = Number(date[3]) > 6 ? Number(date[0]) + 1 : date[0];
+  const [tab, setTab] = useState<Tab>("lang");
+  const list = tab === "lang" ? languages : tab === "fw" ? frameworks : infra;
 
   return (
     <StylesAbout>
       <Container>
-        <PracticingValue >
-          <div>
-            <StyledTypography
-              tag="h2"
-              classText="Heading2"
-              className="experienceTitle"
-            >
-              Experiencia
-            </StyledTypography>
-            <StyledTypography
-              tag="p"
-              classText="BodyColor"
-              className="experienceDescripition"
-            >
-              Sou um entusiasta Desenvolvedor Full-Stack apaixonado por projetos
-              inovadores e pela entrega de soluções de excelência. Minha
-              trajetória inclui uma expertise sólida em PHP, HTML5, CSS,
-              JavaScript, React, Git, Ruby e APIs, que me capacita a desempenhar
-              com destreza no âmbito do Front-End. Adicionalmente, minha
-              experiência robusta no Back-End abrange tecnologias como Node.js,
-              Python, SQL, PostgreSQL, SQLite3 e C#, contribuindo para a criação
-              de sistemas completos e eficientes.{" "}
-            </StyledTypography>
-          </div>
-          <PracticingTime>
-            <StyledTypography tag="p" classText="Number">
-              {timeExperience}
-            </StyledTypography>
-            <StyledTypography tag="p" classText="Number" className="color">
-              .
-            </StyledTypography>
-          </PracticingTime>
-          <StyledTypography tag="p" classText="Body">
-            Anos de pratica
-          </StyledTypography>
-        </PracticingValue>
-        <Expertises>
-          <HeaderExpertises>
-            <StyledButtons
-              nameButtons="selectTab"
-              className={alterTab && "select"}
-              onClick={selectTab}
-            >
-              Conhecimentos
-            </StyledButtons>
-            <StyledButtons
-              nameButtons="selectTab"
-              className={!alterTab ? "select" : ""}
-              onClick={selectTab}
-            >
-              FrameWorks
-            </StyledButtons>
-          </HeaderExpertises>
-          <ListExpertises>
-            {alterTab
-              ? languages.map((language) => {
-                  const [flipped, setFlipped] = useState(false);
-                  const handleCardFlip = () => {
-                    setFlipped(!flipped);
-                  };
-                  const init = dateFormat(language.init);
-                  if (!init) {
-                    return null;
-                  }
-                  return (
-                    <CardExpertises
-                      key={language.id}
-                      onMouseEnter={handleCardFlip}
-                      onMouseLeave={handleCardFlip}
-                    >
-                      <FrontCard flipped={flipped}>
-                        <ImgLanguages language={language.logo} />
-                        <StyledTypography
-                          tag="p"
-                          classText="Caption"
-                          className="experienceTitle"
-                        >
-                          {language.name}
-                        </StyledTypography>
-                      </FrontCard>
-                      <BackCard flipped={flipped}>
-                        <ImgLanguages language={language.logo} />
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Linguagem :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {language.name}
-                          </StyledTypography>
-                        </InfoLanguage>
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Experiencia :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {init}
-                          </StyledTypography>
-                        </InfoLanguage>
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Projetos :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {language.projects}
-                          </StyledTypography>
-                        </InfoLanguage>
-                      </BackCard>
-                    </CardExpertises>
-                  );
-                })
-              : frameworks.map((framework) => {
-                  const [flipped, setFlipped] = useState(false);
-                  const handleCardFlip = () => {
-                    setFlipped(!flipped);
-                  };
-                  const init = dateFormat(framework.init);
-                  if (!init) {
-                    return null;
-                  }
-                  return (
-                    <CardExpertises
-                      key={framework.id}
-                      onMouseEnter={handleCardFlip}
-                      onMouseLeave={handleCardFlip}
-                    >
-                      <FrontCard flipped={flipped}>
-                        <ImgLanguages language={framework.logo} />
-                        <StyledTypography
-                          tag="p"
-                          classText="Caption"
-                          className="experienceTitle"
-                        >
-                          {framework.name}
-                        </StyledTypography>
-                      </FrontCard>
-                      <BackCard flipped={flipped}>
-                        <ImgLanguages language={framework.logo} />
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Linguagem :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {framework.name}
-                          </StyledTypography>
-                        </InfoLanguage>
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Experiencia :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {init}
-                          </StyledTypography>
-                        </InfoLanguage>
-                        <InfoLanguage>
-                          <StyledTypography
-                            tag="p"
-                            classText="DescripitionSecundary"
-                          >
-                            Projetos :
-                          </StyledTypography>{" "}
-                          <StyledTypography tag="p" classText="Descripition">
-                            {framework.projects}
-                          </StyledTypography>
-                        </InfoLanguage>
-                      </BackCard>
-                    </CardExpertises>
-                  );
-                })}
-          </ListExpertises>
-        </Expertises>
+        <div>
+          <SectionLabel>Sobre</SectionLabel>
+          <SectionTitle>Quem é o natanga?</SectionTitle>
+          <AboutGrid>
+            <BioText>
+              Software Engineer Pleno na <strong>Sudeste Online</strong>, onde faço parte
+              do time de desenvolvimento do <strong>Grupo Sudeste</strong> — atuando em
+              múltiplos sistemas: <strong>AgroReceita</strong>, <strong>Softficha</strong> e{" "}
+              <strong>Planteio</strong> (agente de IA autônomo e escalável).<br /><br />
+              Trabalho tanto na camada de código — soluções escaláveis e seguras — quanto
+              na <em>infraestrutura dos servidores</em>, garantindo estabilidade, performance
+              e segurança em ambientes de produção.<br /><br />
+              Minha atuação envolve backend, frontend, mobile, administração de servidores
+              Linux (AWS EC2), automações em Python e definição técnica de soluções.
+              Acredito que engenharia de software vai além de programar: é{" "}
+              <em>entender o problema e automatizar o que pode ser automatizado</em>.
+            </BioText>
+
+            <div>
+              <div style={{ display: "flex", gap: 8, marginBottom: 20 }}>
+                {tabs.map((t) => (
+                  <button
+                    key={t.key}
+                    onClick={() => setTab(t.key)}
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: 12,
+                      fontWeight: 600,
+                      padding: "7px 16px",
+                      borderRadius: 5,
+                      border: "1px solid var(--border)",
+                      cursor: "pointer",
+                      background: tab === t.key ? "#fff" : "transparent",
+                      color: tab === t.key ? "#6d28d9" : "var(--text-subtle)",
+                      transition: "all 0.15s",
+                    }}
+                  >
+                    {t.label}
+                  </button>
+                ))}
+              </div>
+
+              <SkillsGrid>
+                {list.map((item) => (
+                  <SkillChip key={item.id + item.name}>
+                    <div style={{ width: 28, height: 28, flexShrink: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <ImgLanguages language={item.logo} />
+                    </div>
+                    <SkillName>{item.name}</SkillName>
+                  </SkillChip>
+                ))}
+              </SkillsGrid>
+            </div>
+          </AboutGrid>
+        </div>
       </Container>
     </StylesAbout>
   );

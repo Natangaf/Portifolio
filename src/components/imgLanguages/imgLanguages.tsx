@@ -1,43 +1,39 @@
-import react from "../../assets/icons/iconPrograms/react.svg"
-import html5 from "../../assets/icons/iconPrograms/html5.svg"
-import css from "../../assets/icons/iconPrograms/css.svg"
-import javascript from "../../assets/icons/iconPrograms/javascript.svg"
-import typescript from "../../assets/icons/iconPrograms/typescript.svg"
-import django from "../../assets/icons/iconPrograms/django.svg"
-import express from "../../assets/icons/iconPrograms/express.svg"
 import TypeORM from "../../assets/icons/iconPrograms/TypeORM.png"
-import Jest from "../../assets/icons/iconPrograms/Jest.svg"
-import python from "../../assets/icons/iconPrograms/python.svg"
-import sqlite from "../../assets/icons/iconPrograms/sqlite.svg"
-import pytest from "../../assets/icons/iconPrograms/pytest.svg"
-import csharp from "../../assets/icons/iconPrograms/csharp.svg"
-import postgresql from "../../assets/icons/iconPrograms/postgresql.svg"
-import nextjs from "../../assets/icons/iconPrograms/nextjs.svg"
-import php from "../../assets/icons/iconPrograms/php.svg"
-import springboot from "../../assets/icons/iconPrograms/springboot.svg"
 import { iImgLanguages } from "../../interface";
 
+const BASE = "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons";
+
+const iconMap: Record<string, string> = {
+  html5:        `${BASE}/html5/html5-plain.svg`,
+  css:          `${BASE}/css3/css3-plain.svg`,
+  javascript:   `${BASE}/javascript/javascript-plain.svg`,
+  Python:       `${BASE}/python/python-plain.svg`,
+  php:          `${BASE}/php/php-plain.svg`,
+  "C#":         `${BASE}/csharp/csharp-plain.svg`,
+  react:        `${BASE}/react/react-original.svg`,
+  typescript:   `${BASE}/typescript/typescript-plain.svg`,
+  nodejs:       `${BASE}/nodejs/nodejs-plain.svg`,
+  "Express.js": `${BASE}/express/express-original-wordmark.svg`,
+  vuejs:        `${BASE}/vuejs/vuejs-plain.svg`,
+  "next.js":    `${BASE}/nextjs/nextjs-plain.svg`,
+  Django:       `${BASE}/django/django-plain.svg`,
+  springboot:   `${BASE}/spring/spring-original.svg`,
+  docker:       `${BASE}/docker/docker-plain.svg`,
+  aws:          `${BASE}/amazonwebservices/amazonwebservices-plain-wordmark.svg`,
+  git:          `${BASE}/git/git-plain.svg`,
+  mongodb:      `${BASE}/mongodb/mongodb-plain.svg`,
+  Postgresql:   `${BASE}/postgresql/postgresql-plain.svg`,
+  Jest:         `${BASE}/jest/jest-plain.svg`,
+  linux:        `${BASE}/linux/linux-plain.svg`,
+  Sqlite3:      `${BASE}/sqlite/sqlite-plain.svg`,
+  Pytest:       `${BASE}/pytest/pytest-plain.svg`,
+};
+
 export function ImgLanguages({ language }: iImgLanguages) {
-    return (
-        <>
-            {language === "html5" && <img src={html5} alt={language} />}
-            {language === "css" && <img src={css} alt={language} />}
-            {language === "javascript" && <img src={javascript} alt={language} />}
-            {language === "Python" && <img src={python} alt={language} />}
-            {language === "php" && <img src={php} alt={language} />}
-            {language === "C#" && <img src={csharp} alt={language} />}
-            {language === "next.js" && <img src={nextjs} alt={language} />}
-            {language === "react" && <img src={react} alt={language} />}
-            {language === "typescript" && <img src={typescript} alt={language} />}
-            {language === "Express.js" && <img src={express} alt={language} />}
-            {language === "Jest" && <img src={Jest} alt={language} />}
-            {language === "Django" && <img src={django} alt={language} />}
-            {language === "Sqlite3" && <img src={sqlite} alt={language} />}
-            {language === "Pytest" && <img src={pytest} alt={language} />}
-            {language === "Postgresql" && <img src={postgresql} alt={language} />}
-            {language === "TypeORM" && <img src={TypeORM} alt={language} />}
-            {language === "springboot" && <img src={springboot} alt={language} />}
-           
-        </>
-    )
+  if (language === "TypeORM") {
+    return <img src={TypeORM} alt="TypeORM" />;
+  }
+  const src = iconMap[language];
+  if (!src) return null;
+  return <img src={src} alt={language} />;
 }

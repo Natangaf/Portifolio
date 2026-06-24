@@ -2,7 +2,6 @@ import { useState } from "react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { toast } from "react-toastify";
 import { StylesContact } from "./style";
-import { StyledTypography } from "../../components/baseTypography/style";
 import { InputsContact } from "../../components/InputsContact";
 import { StyledButtons } from "../../styles/Buttons";
 import { Loader } from "../../components/Loader";
@@ -24,25 +23,14 @@ export function Contact() {
 
   const onSubmit = handleSubmit(
     async ({ name, email, message }: schemaContactDTO) => {
-      setSend(!send);
-      const tamplateParams = {
-        from_name: name,
-        message: message,
-        email,
-      };
-
+      setSend(true);
+      const tamplateParams = { from_name: name, message, email };
       try {
-        await emailjs.send(
-          "service_zfrc958",
-          "template_rx5pyum",
-          tamplateParams,
-          "ptJ1nHgaX-ms2AHkj"
-        );
-        toast.success("Já, já entro em contato");
+        await emailjs.send("service_zfrc958", "template_rx5pyum", tamplateParams, "ptJ1nHgaX-ms2AHkj");
+        toast.success("Já, já entro em contato!");
         reset();
       } catch (error) {
-        console.log(error);
-        toast.error("Algo deu errado, mas já vamos arrumar");
+        toast.error("Algo deu errado, tenta de novo.");
       } finally {
         setSend(false);
       }
@@ -53,61 +41,32 @@ export function Contact() {
     <StylesContact>
       <div className="container">
         <section>
-          <StyledTypography classText="Heading2" tag="h2">
-            Contato
-          </StyledTypography>
-          <StyledTypography classText="BodyColor" tag="p">
-            natanf1ernandes@gmail.com
-          </StyledTypography>
+          <p className="section-label">Contato</p>
+          <h2 className="contact-title">Vamos construir<br />algo juntos?</h2>
+          <p className="contact-sub">
+            Aberto a projetos freelance, oportunidades e parcerias.
+          </p>
+          <p className="contact-email">natanga.dev@gmail.com</p>
+          <div className="contact-links">
+            <a className="c-link" href="https://github.com/Natangaf" target="_blank" rel="noreferrer">GitHub →</a>
+            <a className="c-link" href="https://linkedin.com/in/natangaf" target="_blank" rel="noreferrer">LinkedIn →</a>
+          </div>
         </section>
-        <section>
-          <StyledTypography classText="Body" tag="h2">
-            Vamos tomar um café e <span>bater papo comigo</span>
-          </StyledTypography>
-          <form onSubmit={onSubmit} noValidate>
-            <InputsContact
-              titleInput="Nome"
-              label="Seu nome"
-              {...register("name")}
-            />
-            {errors.name?.message ? (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {errors.name.message}
-              </StyledTypography>
-            ) : (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {" "}
-              </StyledTypography>
-            )}
-            <InputsContact
-              titleInput="Email"
-              label="Seu Email"
-              {...register("email")}
-            />
-            {errors.email?.message ? (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {errors.email.message}
-              </StyledTypography>
-            ) : (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {" "}
-              </StyledTypography>
-            )}
-            <InputsContact
-              titleInput="Mensagem"
-              label="Mensagem"
-              {...register("message")}
-            />
 
-            {errors.message?.message ? (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {errors.message?.message}
-              </StyledTypography>
-            ) : (
-              <StyledTypography classText="BodyError" className="error" tag="p">
-                {" "}
-              </StyledTypography>
-            )}
+        <section>
+          <h3 style={{ fontSize: 15, fontWeight: 600, color: 'var(--text)', marginBottom: 4 }}>
+            Enviar mensagem
+          </h3>
+          <form onSubmit={onSubmit} noValidate>
+            <InputsContact titleInput="Nome" label="Seu nome" {...register("name")} />
+            <p className="error">{errors.name?.message || " "}</p>
+
+            <InputsContact titleInput="Email" label="Seu email" {...register("email")} />
+            <p className="error">{errors.email?.message || " "}</p>
+
+            <InputsContact titleInput="Mensagem" label="Mensagem" {...register("message")} />
+            <p className="error">{errors.message?.message || " "}</p>
+
             <StyledButtons nameButtons="buttonSend">
               {send ? <Loader /> : "Enviar"}
             </StyledButtons>

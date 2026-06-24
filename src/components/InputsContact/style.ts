@@ -3,23 +3,36 @@ import styled from "styled-components";
 export const StylesInputs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  border-bottom: 1px solid var(--Color-grey-50);
+  gap: 6px;
+  border-bottom: 1px solid var(--border);
   padding: 10px 0;
-  label{
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: var(--colorSecond);
+  transition: border-color 0.15s;
+
+  &:focus-within {
+    border-color: var(--accent);
   }
-  input{
-    height: 38px;
+
+  label {
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-family: 'Inter', sans-serif;
+  }
+
+  input, textarea {
+    height: 36px;
     background-color: transparent;
     outline: none;
-    border: 0px solid transparent;
-    color: var(--colorSecond);
+    border: none;
+    color: var(--text);
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    resize: none;
   }
-  input:active{
-    background-color: transparent;
-    color: var(--colorSecond);
+
+  input::placeholder, textarea::placeholder {
+    color: var(--text-muted);
   }
-`
+`;

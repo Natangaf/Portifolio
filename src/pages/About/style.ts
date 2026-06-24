@@ -1,236 +1,141 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
-export const StylesAbout = styled(motion.section).attrs({
-  "data-com": "StylesAbout",
-})`
-  background-color: var(--bgsecond);
+export const StylesAbout = styled(motion.section)`
+  background-color: var(--bg);
   width: 100%;
   height: 100%;
   display: flex;
-  position: relative;
+  align-items: center;
+  justify-content: center;
+  padding-top: 64px;
+
   @media (max-width: 700px) {
     overflow-y: auto;
     height: 100vh;
+    align-items: flex-start;
   }
 `;
 
-export const Container = styled.section.attrs({ "data-com": "Container" })`
-  height: 89vh;
+export const Container = styled.section`
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 40px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 70px;
-
-  @media (max-width: 1000px) {
-    margin: 0 auto;
-    width: 90%;
-  }
+  flex-direction: column;
+  gap: 48px;
 
   @media (max-width: 700px) {
-    height: 100vh;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    margin-top: 200px;
+    padding: 32px 24px 60px;
+    gap: 36px;
   }
 `;
 
-export const PracticingValue = styled.div.attrs({
-  "data-com": "PracticingValue",
-})`
-  height: 70%;
-  width: 40%;
-  text-align: right;
-  border: 1px solid var(--Color-grey-50);
-  border-right: none;
-  display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
-  padding: 10px 20px 10px 0px;
+export const SectionLabel = styled.p`
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 16px;
 
-  @media (max-width: 1000px) {
-    height: 55%;
-    width: 80%;
-    text-align: right;
-    border: 1px solid var(--Color-grey-50);
-    border-right: none;
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: space-evenly;
-    padding: 0px;
-  }
-
-  @media (max-width: 700px) {
-    height: 60%;
-    width: 90%;
-    padding: 0px;
-  }
+  &::before { content: '// '; }
 `;
 
-export const PracticingTime = styled.div.attrs({
-  "data-com": "PracticingTime",
-})`
-  display: flex;
-  height: auto;
-
-  .color {
-    color: var(--colorPrimary);
-  }
-
-  @media (max-width: 1000px) {
-    align-items: baseline;
-  }
-  
+export const SectionTitle = styled.h2`
+  font-family: var(--font-display);
+  font-size: 62px;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 40px;
 `;
 
-export const ExperienceDescription = styled.p.attrs({
-  "data-com": "ExperienceDescription",
-})`
-  padding-left: 10px;
-  color: var(--Color-grey-50);
-`;
+export const AboutGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 64px;
+  align-items: start;
 
-export const Expertises = styled.div.attrs({ "data-com": "Expertises" })`
-  height: 70%;
-  width: 50%;
-  text-align: right;
-
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 30px;
-
-  @media (max-width: 1000px) {
-    width: 80%;
-    padding-bottom: 30px;
-  }
-  @media (max-width: 400px) {
-    width: 90%;
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: 32px;
   }
 `;
-export const HeaderExpertises = styled.div.attrs({
-  "data-com": "HeaderExpertises",
-})`
-  width: 100%;
 
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 20px;
-  justify-content: flex-end;
-  @media (max-width: 400px) {
-    flex-direction: column;
-  }
-`;
-export const ListExpertises = styled.ul.attrs({
-  "data-com": "ListExpertises",
-})`
-  width: 100%;
+export const BioText = styled.p`
+  font-size: 18px;
+  color: var(--text-subtle);
+  line-height: 1.8;
+  font-weight: 400;
 
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-
-  list-style: none;
-`;
-export const CardExpertises = styled.li.attrs({
-  "data-com": "CardExpertises",
-})`
-  width: 110px;
-  height: 140px;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  perspective: 1000px;
-  cursor: pointer;
+  strong { color: var(--text); font-weight: 600; }
+  em { font-style: normal; color: var(--accent-2); }
 `;
 
-interface IflippedCard {
-  flipped: boolean;
-}
+export const SkillsGrid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
 
-export const FrontCard = styled.div<IflippedCard>`
-  background-color: rgb(255 255 255 / 11%);
+  @media (max-width: 900px) { grid-template-columns: 1fr 1fr; }
+  @media (max-width: 500px) { grid-template-columns: 1fr; }
+`;
 
-  width: 100%;
-  height: 100%;
-
+export const SkillChip = styled.div`
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 12px 14px;
   display: flex;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-  text-align: center;
-  position: absolute;
+  gap: 10px;
+  transition: border-color 0.2s, transform 0.2s, background 0.2s;
 
-  padding: 5px;
-
-  border-radius: 5%;
-
-  backface-visibility: hidden;
-  transform: ${({ flipped }) =>
-    flipped ? "rotateY(-180deg)" : "rotateY(0deg)"};
-  transition: transform 0.5s;
-`;
-
-export const BackCard = styled.div<IflippedCard>`
-  background-color: rgb(255 255 255 / 11%);
-
-  width: 100%;
-  height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  flex-direction: column;
-  text-align: center;
-  position: absolute;
-
-  padding: 5px;
-
-  border-radius: 5%;
-
-  backface-visibility: hidden;
-  transform: ${({ flipped }) =>
-    flipped ? "rotateY(0deg)" : "rotateY(180deg)"};
-  transition: transform 0.5s;
-  p {
-    z-index: 2;
-  }
-  Img {
-    width: 90%;
-    height: 80%;
+  img {
+    width: 26px;
+    height: 26px;
     object-fit: contain;
+    display: block;
+  }
 
-    filter: blur(4px) brightness(0.3);
-
-    position: absolute;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-
-    z-index: 1;
+  &:hover {
+    border-color: rgba(232, 121, 249, 0.4);
+    background: rgba(232, 121, 249, 0.06);
+    transform: translateY(-2px);
   }
 `;
-export const InfoLanguage = styled.div.attrs({
-  "data-com": "InfoLanguage",
-})`
-  width: 100%;
 
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 1px;
-
-  span {
-    display: flex;
-    align-items: center;
-    gap: px;
-  }
+export const SkillDot = styled.span<{ color?: string }>`
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  background: ${({ color }) => color || 'var(--accent)'};
+  flex-shrink: 0;
 `;
+
+export const SkillName = styled.span`
+  font-size: 14.5px;
+  font-weight: 600;
+  color: var(--text);
+`;
+
+export const SkillLevel = styled.span`
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-left: auto;
+`;
+
+export const PracticingValue = styled.div``;
+export const PracticingTime = styled.div``;
+export const Expertises = styled.div``;
+export const HeaderExpertises = styled.div``;
+export const ListExpertises = styled.ul``;
+export const CardExpertises = styled.li``;
+export const FrontCard = styled.div<{ flipped: boolean }>``;
+export const BackCard = styled.div<{ flipped: boolean }>``;
+export const InfoLanguage = styled.div``;
+export const ExperienceDescription = styled.p``;
