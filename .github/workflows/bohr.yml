@@ -1,5 +1,5 @@
 name: bohr.io deploy
-on: 
+on:
   push:
   repository_dispatch:
     types: [bohr-dispatch]
@@ -10,4 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: bohr-io/action@v2
+      - uses: bohr-io/action@main
+        env:
+          BOHR_API_TOKEN: ${{ secrets.BOHR_API_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
